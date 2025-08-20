@@ -27,10 +27,14 @@ const Skills = () => {
   const technologies = [
     { name: "React", level: 90 },
     { name: "TypeScript", level: 85 },
-    { name: "Figma", level: 95 },
+    { name: "JavaScript", level: 90 },
+    { name: "Git", level: 90 },
     { name: "Tailwind CSS", level: 90 },
     { name: "UI/UX Design", level: 95 },
-    { name: "Next.js", level: 80 }
+    { name: "Figma", level: 95 },
+    { name: "AdobeXD", level: 80 },
+    { name: "Next.js", level: 80 },
+    { name: "Supabase", level: 85 }
   ];
 
   return (

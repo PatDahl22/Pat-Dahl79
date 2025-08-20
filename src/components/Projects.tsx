@@ -1,4 +1,5 @@
 import ProjectCard from './ProjectCard';
+import { projects } from '@/data';
 
 const Projects = () => {
   const scrollToSection = (sectionId: string) => {
@@ -7,43 +8,6 @@ const Projects = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
-  // Project data based on Pat Dahl's portfolio
-  const projects = [
-    {
-      id: 1,
-      title: "TravelBuddy",
-      description: "Work professionally as a UX/UI designer with Front End skills. Translate user needs into a finished product or service. Use agile methods to participate in projects and work processes.",
-      category: "UX/UI Design & Development",
-      image: "/src/assets/project-ecommerce.jpg",
-      link: "https://travelbuddy-demo.com",
-      slug: "travelbuddy",
-      status: "case-study" as const,
-      tools: ["Figma", "HTML&CSS", "React JS", "TailwindCSS"]
-    },
-    {
-      id: 2,
-      title: "Shoes & Stitches",
-      description: "Deepen the knowledge and ability to develop interfaces for both mobile applications and websites using the ReactJS framework. The focus is on optimizing user experience and creating responsive, modern designs.",
-      category: "E-commerce Development",
-      image: "/src/assets/project-mobile.jpg",
-      link: "https://shoes-stitches-demo.com",
-      slug: "shoes-stitches",
-      status: "live" as const,
-      tools: ["Figma", "HTML&CSS", "React JS", "TailwindCSS", "Firebase"]
-    },
-    {
-      id: 3,
-      title: "FemTask",
-      description: "Advanced Interaction Design: A deep dive into UX design focusing on user analysis, requirements management, and the design process. The goal is to translate complex user needs into intuitive digital solutions.",
-      category: "UX Design",
-      image: "/src/assets/project-corporate.jpg",
-      link: "",
-      slug: "femtask",
-      status: "case-study" as const,
-      tools: ["Figma", "Figjam"]
-    }
-  ];
 
   return (
     <section id="projects" className="py-20 lg:py-32 px-6 lg:px-8 bg-section-pattern bg-cover bg-center relative">
@@ -68,9 +32,11 @@ const Projects = () => {
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
+          {[...projects]
+            .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+            .map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
         </div>
 
         {/* CTA */}

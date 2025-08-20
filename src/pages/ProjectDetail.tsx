@@ -1,71 +1,12 @@
 import { useParams, Link } from 'react-router-dom';
 import Header from '@/components/Header';
-
-interface ProjectData {
-  [key: string]: {
-    title: string;
-    description: string;
-    fullDescription: string;
-    category: string;
-    image: string;
-    images: string[];
-    tools: string[];
-    liveLink?: string;
-    githubLink?: string;
-    figmaLink?: string;
-    challenge: string;
-    solution: string;
-    results: string[];
-  };
-}
-
-const projectData: ProjectData = {
-  'travelbuddy': {
-    title: 'TravelBuddy',
-    description: 'A comprehensive travel planning application',
-    fullDescription: 'Work professionally as a UX/UI designer with Front End skills. Translate user needs into a finished product or service. Use agile methods to participate in projects and work processes.',
-    category: 'UX/UI Design & Development',
-    image: '/src/assets/project-ecommerce.jpg',
-    images: ['/src/assets/project-ecommerce.jpg', '/src/assets/project-dashboard.jpg'],
-    tools: ['Figma', 'HTML&CSS', 'React JS', 'TailwindCSS'],
-    challenge: 'Creating an intuitive travel planning experience that helps users organize complex itineraries while maintaining simplicity.',
-    solution: 'Developed a user-centered design approach with extensive user research, prototyping, and iterative testing to create an seamless travel planning interface.',
-    results: ['Improved user engagement by 40%', 'Reduced planning time by 60%', 'Achieved 95% user satisfaction score']
-  },
-  'shoes-stitches': {
-    title: 'Shoes & Stitches',
-    description: 'E-commerce platform for fashion retail',
-    fullDescription: 'Deepen the knowledge and ability to develop interfaces for both mobile applications and websites using the ReactJS framework. The focus is on optimizing user experience and creating responsive, modern designs.',
-    category: 'E-commerce Development',
-    image: '/src/assets/project-mobile.jpg',
-    images: ['/src/assets/project-mobile.jpg', '/src/assets/project-portfolio.jpg'],
-    tools: ['Figma', 'HTML&CSS', 'React JS', 'TailwindCSS', 'Firebase'],
-    liveLink: 'https://shoes-stitches-demo.com',
-    githubLink: 'https://github.com/patdahl',
-    figmaLink: 'https://figma.com/design/shoes-stitches',
-    challenge: 'Building a modern e-commerce platform that provides excellent user experience across all devices while maintaining high performance.',
-    solution: 'Implemented a responsive design system with React and Firebase backend, focusing on mobile-first approach and seamless checkout flow.',
-    results: ['Mobile conversion rate increased by 35%', 'Page load time reduced by 50%', 'Customer satisfaction rating: 4.8/5']
-  },
-  'femtask': {
-    title: 'FemTask',
-    description: 'Task management application focused on user experience',
-    fullDescription: 'Advanced Interaction Design: A deep dive into UX design focusing on user analysis, requirements management, and the design process. The goal is to translate complex user needs into intuitive digital solutions.',
-    category: 'UX Design',
-    image: '/src/assets/project-corporate.jpg',
-    images: ['/src/assets/project-corporate.jpg', '/src/assets/project-branding.jpg'],
-    tools: ['Figma', 'Figjam'],
-    figmaLink: 'https://figma.com/design/femtask',
-    challenge: 'Designing a task management system that caters specifically to professional women, addressing their unique workflow needs.',
-    solution: 'Conducted extensive user research and created detailed personas to design an intuitive task management interface with advanced collaboration features.',
-    results: ['User task completion rate improved by 45%', 'Daily active users increased by 70%', 'Reduced learning curve by 3 days']
-  }
-};
+import { getProjectBySlug } from '@/data';
 
 const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();
+  const project = slug ? getProjectBySlug(slug) : undefined;
   
-  if (!slug || !projectData[slug]) {
+  if (!slug || !project) {
     return (
       <div className="min-h-screen bg-background">
         <Header />
@@ -82,7 +23,7 @@ const ProjectDetail = () => {
     );
   }
 
-  const project = projectData[slug];
+  
 
   return (
     <div className="min-h-screen bg-background">

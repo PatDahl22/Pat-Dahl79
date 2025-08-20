@@ -1,17 +1,8 @@
 import { Link } from 'react-router-dom';
+import { Project } from '@/data';
 
 interface ProjectCardProps {
-  project: {
-    id: number;
-    title: string;
-    description: string;
-    category: string;
-    image: string;
-    link: string;
-    slug: string;
-    status: 'live' | 'case-study' | 'coming-soon';
-    tools: string[];
-  };
+  project: Project;
 }
 
 const ProjectCard = ({ project }: ProjectCardProps) => {

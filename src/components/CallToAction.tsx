@@ -2,8 +2,8 @@ import { ArrowRight, Mail, Calendar } from 'lucide-react';
 
 const CallToAction = () => {
   return (
-    <section id="cta" className="py-20 lg:py-32 px-6 lg:px-8 bg-hero2-pattern bg-cover bg-center relative">
-      <div className="absolute inset-0 bg-primary/90"></div>
+    <section id="cta" className="py-18 lg:py-24 px-6 lg:px-8 bg-hero2-pattern bg-cover bg-center relative">
+      <div className="absolute inset-0 bg-primary/60"></div>
       
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         {/* Main Content */}
@@ -41,7 +41,7 @@ const CallToAction = () => {
         {/* Stats */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-12 animate-fade-in">
           <div className="text-center">
-            <div className="text-3xl lg:text-4xl font-bold text-primary-foreground mb-2">15+</div>
+            <div className="text-3xl lg:text-4xl font-bold text-primary-foreground mb-2">10+</div>
             <div className="text-primary-foreground/80">Projects Completed</div>
           </div>
           <div className="text-center">
@@ -49,7 +49,7 @@ const CallToAction = () => {
             <div className="text-primary-foreground/80">Client Satisfaction</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl lg:text-4xl font-bold text-primary-foreground mb-2">2+</div>
+            <div className="text-3xl lg:text-4xl font-bold text-primary-foreground mb-2">4+</div>
             <div className="text-primary-foreground/80">Years Experience</div>
           </div>
         </div>

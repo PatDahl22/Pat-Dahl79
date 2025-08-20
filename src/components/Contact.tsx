@@ -29,31 +29,14 @@ const Contact = () => {
               <div>
                 <h4 className="text-lg font-semibold text-text-primary mb-1">Send me an email</h4>
                 <a 
-                  href="mailto:hello@patdahl.com" 
+                  href="mailto:pattaravarat.dahl@gmail.com" 
                   className="text-primary hover:text-primary-hover font-medium transition-colors"
                 >
-                  hello@patdahl.com
+                  pattaravarat.dahl@gmail.com
                 </a>
               </div>
             </div>
 
-            {/* Schedule Call */}
-            <div className="flex items-center space-x-4 p-6 bg-card rounded-radius-lg border border-border-light hover:bg-card-hover transition-colors">
-              <div className="w-12 h-12 bg-primary/10 rounded-radius flex items-center justify-center flex-shrink-0">
-                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-text-primary mb-1">Schedule a call</h4>
-                <a 
-                  href="#" 
-                  className="text-primary hover:text-primary-hover font-medium transition-colors"
-                >
-                  Book a 30-minute chat
-                </a>
-              </div>
-            </div>
 
             {/* Availability Status */}
             <div className="flex items-center space-x-3 p-6 bg-success/10 border border-success/20 rounded-radius-lg">

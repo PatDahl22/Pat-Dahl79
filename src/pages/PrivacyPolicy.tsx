@@ -151,8 +151,8 @@ const PrivacyPolicy = () => {
                 <div className="mt-4 p-6 bg-tertiary rounded-radius">
                   <p className="text-text-primary">
                     <strong>Pat Dahl</strong><br />
-                    Email: <a href="mailto:hello@patdahl.com" className="text-primary hover:text-primary-hover">hello@patdahl.com</a><br />
-                    Website: <a href="/" className="text-primary hover:text-primary-hover">patdahl.com</a>
+                    Email: <a href="mailto:pattaravarat.dahl@gmail.com" className="text-primary hover:text-primary-hover">pattaravarat.dahl@gmail.com</a><br />
+                    Website: <a href="/" className="text-primary hover:text-primary-hover">patdahl-portfolio.com</a>
                   </p>
                 </div>
               </section>

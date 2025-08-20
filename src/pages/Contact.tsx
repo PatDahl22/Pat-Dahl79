@@ -1,11 +1,9 @@
-import Header from "@/components/Header";
 import Contact from "@/components/Contact";
 
 const ContactPage = () => {
   return (
     <div className="min-h-screen">
-      <Header />
-      <main className="pt-16 lg:pt-20">
+      <main className="pt-8 lg:pt-16">
         <Contact />
       </main>
     </div>

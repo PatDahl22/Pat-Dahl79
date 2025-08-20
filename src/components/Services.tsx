@@ -86,24 +86,6 @@ const Services = () => {
             </div>
           ))}
         </div>
-
-        {/* CTA Section */}
-        <div className="mt-16 lg:mt-20 text-center">
-          <div className="bg-gradient-to-r from-primary-light to-primary-light/50 p-8 lg:p-12 rounded-radius-lg">
-            <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-4">
-              Ready to Start Your Project?
-            </h3>
-            <p className="text-lg text-text-secondary mb-8 max-w-2xl mx-auto">
-              Let's discuss how I can help bring your ideas to life with exceptional design and development.
-            </p>
-            <a 
-              href="/contact"
-              className="cta-button inline-flex items-center gap-3 px-8 py-4 rounded-radius-lg text-lg font-semibold"
-            >
-              Get In Touch
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   );

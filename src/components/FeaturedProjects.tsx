@@ -1,29 +1,18 @@
 import { ArrowRight, ExternalLink } from 'lucide-react';
+import { projects } from '@/data';
 
 const FeaturedProjects = () => {
-  const featuredProjects = [
-    {
-      title: "TravelBuddy",
-      description: "A comprehensive travel planning app with itinerary management, booking integration, and social features for modern travelers.",
-      image: "bg-project1-image",
-      link: "/project/travelbuddy",
+  // Always show the 3 latest projects by date (descending)
+  const featuredProjects = [...projects]
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 3)
+    .map(project => ({
+      title: project.title,
+      description: project.fullDescription,
+      image: project.image,
+      link: `/project/${project.slug}`,
       external: false
-    },
-    {
-      title: "Shoes & Stitches",
-      description: "E-commerce platform for fashion retail with advanced filtering, wishlist functionality, and seamless checkout experience.",
-      image: "bg-project4-image", 
-      link: "/project/shoes-stitches",
-      external: false
-    },
-    {
-      title: "FemTask",
-      description: "Task management application designed specifically for women entrepreneurs with goal tracking and community features.",
-      image: "bg-project3-image",
-      link: "/project/femtask", 
-      external: false
-    }
-  ];
+    }));
 
   return (
     <section id="featured-projects" className="py-20 lg:py-32 px-6 lg:px-8 bg-surface">
@@ -47,7 +36,10 @@ const FeaturedProjects = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Project Image */}
-              <div className={`h-64 ${project.image} bg-cover bg-center relative overflow-hidden`}>
+              <div
+                className="h-64 bg-cover bg-center relative overflow-hidden"
+                style={{ backgroundImage: `url(${project.image})` }}
+              >
                 <div className="absolute inset-0 bg-black-100/20 group-hover:bg-black-100/40 transition-colors duration-300"></div>
                 <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <ExternalLink className="w-5 h-5 text-primary-foreground" />
@@ -56,7 +48,7 @@ const FeaturedProjects = () => {
 
               {/* Project Content */}
               <div className="p-6 lg:p-8">
-                <h3 className="text-xl lg:text-2xl font-bold text-text-primary mb-3 group-hover:text-primary transition-colors duration-200">
+                <h3 className="text-xl lg:text-2xl font-bold text-text-primary mb-3 group-hover:text-primary transition-colors duration">
                   {project.title}
                 </h3>
                 <p className="text-text-secondary leading-relaxed mb-6">

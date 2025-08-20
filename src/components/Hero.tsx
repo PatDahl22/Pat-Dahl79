@@ -16,7 +16,8 @@ const Hero = () => {
         {/* Status Badge */}
         <div className="inline-flex items-center gap-2 bg-primary-light text-primary-foreground px-4 py-2 rounded-full text-sm font-medium mb-8 animate-fade-in">
           <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-          Available for new projects
+          <span className="text-success font-medium">Currently Available</span>
+          <span className="text-text-secondary">— Accepting new projects</span>
         </div>
 
         {/* Main Headline */}
@@ -42,12 +43,6 @@ const Hero = () => {
           <ArrowRight className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" />
         </button>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-text-muted rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-text-muted rounded-full mt-2 animate-pulse"></div>
-          </div>
-        </div>
       </div>
     </section>
   );

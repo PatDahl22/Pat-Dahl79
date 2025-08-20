@@ -1,5 +1,4 @@
 import { useParams, Link } from 'react-router-dom';
-import Header from '@/components/Header';
 import { getProjectBySlug } from '@/data';
 
 const ProjectDetail = () => {
@@ -9,7 +8,6 @@ const ProjectDetail = () => {
   if (!slug || !project) {
     return (
       <div className="min-h-screen bg-background">
-        <Header />
         <main className="pt-20 px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center py-20">
             <h1 className="text-4xl font-bold text-text-primary mb-4">Project Not Found</h1>
@@ -23,18 +21,14 @@ const ProjectDetail = () => {
     );
   }
 
-  
-
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      
+    <div className="min-h-screen bg-background">      
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="mb-8">
-              <Link to="/" className="text-primary hover:text-primary-hover font-medium">
+              <Link to="/projects" className="text-primary hover:text-primary-hover font-medium">
                 ← Back to Projects
               </Link>
             </div>
@@ -44,20 +38,24 @@ const ProjectDetail = () => {
                 <span className="text-sm text-text-muted uppercase tracking-wider font-medium mb-4 block">
                   {project.category}
                 </span>
-                <h1 className="text-4xl lg:text-5xl font-bold text-text-primary mb-6">
+                <h1 className="text-4xl lg:text-5xl font-bold text-text-primary mb-2">
                   {project.title}
                 </h1>
                 <p className="text-lg text-text-secondary mb-8">
                   {project.fullDescription}
                 </p>
-                
+                <h2 className="text-2xl font-bold text-text-primary mb-2">My Role</h2>
+                <p className="text-lg text-text-secondary mb-8">
+                  {project.myrole}
+                </p>
+                <h2 className="text-2xl font-bold text-text-primary mb-2">Tools:</h2>
                 <div className="flex flex-wrap gap-3 mb-8">
                   {project.tools.map((tool, index) => (
                     <span
                       key={index}
-                      className="px-3 py-2 bg-tertiary text-text-primary text-sm rounded-radius font-medium"
+                      className="px-3 bg-tertiary text-text-primary text-sm rounded-radius font-medium"
                     >
-                      #{tool}
+                    #{tool}
                     </span>
                   ))}
                 </div>
@@ -90,7 +88,7 @@ const ProjectDetail = () => {
                       rel="noopener noreferrer"
                       className="border border-border text-text-primary px-6 py-3 rounded-radius font-medium hover:bg-card-hover transition-colors"
                     >
-                      View Design
+                      Wireframe Design
                     </a>
                   )}
                 </div>
@@ -106,6 +104,59 @@ const ProjectDetail = () => {
             </div>
           </div>
         </section>
+
+        {/* Project Details */}
+        <section className="py-16 px-6 lg:px-8 bg-surface">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12">
+              <div>
+                <h3 className="text-2xl font-bold text-text-primary mb-4">Assignments</h3>
+                <p className="text-text-secondary">{project.assignmentdescription}</p>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-text-primary mb-4">Key Features</h3>
+                <ul className="space-y-2">
+                  {project.keyFeatures.map((feature, index) => (
+                    <li key={index} className="text-text-secondary flex items-start">
+                      <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <div className="max-w-4xl mx-auto mt-8">
+              <h3 className="text-2xl font-bold text-text-primary mb-4">Conclusion</h3>
+              <ul className="space-y-2">
+                {project.conclusion.map((conclusion, index) => (
+                  <li key={index} className="text-text-secondary flex items-start">
+                    <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    {conclusion}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Project Images */}
+        {project.figmaimg.length > 1 && (
+          <section className="py-16 px-6 lg:px-8">
+            <div className="max-w-6xl mx-auto">
+              <h3 className="text-2xl font-bold text-text-primary mb-8 text-center">Figma Wireframes</h3>
+              <div className="grid md:grid-cols-2 gap-8">
+                {project.figmaimg.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image}
+                    alt={`${project.title} screenshot ${index + 1}`}
+                    className="w-full rounded-radius-lg shadow-lg"
+                  />
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Project Details */}
         <section className="py-16 px-6 lg:px-8 bg-surface">

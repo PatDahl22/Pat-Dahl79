@@ -24,6 +24,12 @@ export interface Project {
   solution: string;
   results: string[];
   date: string;
+  myrole: string;
+  assignmentdescription: string;
+  assignmentimg: string[];
+  conclusion: string[];
+  figmaimg: string[];
+  keyFeatures: string[];
 }
 
 export const projects: Project[] = [
@@ -35,11 +41,28 @@ export const projects: Project[] = [
     fullDescription: 'Work professionally as a UX/UI designer with Front End skills. Translate user needs into a finished product or service. Use agile methods to participate in projects and work processes.',
     category: 'UX/UI Design & Development',
     image: '/assets/company/ReseApp.png',
-    images: ['/assets/project-ecommerce.jpg', '/assets/project-dashboard.jpg'],
-    tools: ['Figma', 'Figjam', 'React JS', 'Discord', 'TailwindCSS'],
+    images: ['/assets/company/TB-Mobile-Features.png', '/assets/company/TB-App.png'],
+    tools: ['Figma', 'Figjam', 'React JS', 'Discord'],
     status: 'case-study',
+    myrole: 'User research, Usability testing, Wireframes and prototypes',
+    assignmentdescription: 'Create wireframes and prototypes for a travel planning application, conduct user research to gather insights, and perform usability testing to validate design decisions.',
+    assignmentimg: ['/assets/company/ResApp-MobileSection.png', '/assets/project-prototypes.jpg'],
+    conclusion: [
+      "TravelBuddy is an ultimate personal travel guide, designed to inspire and assist you in discovering dining options, dream destinations, accommodations, and activities tailored to your preferences.",
+      "By combining the power of AI with intuitive usability, personalized recommendations, and geolocation.",
+      "TravelBuddy goes beyond the traditional travel assistant.",
+      "It anticipates your needs and provides quick, relevant answers with just a tap.",
+      "The design process allowed for continuous improvement based on user testing."
+    ],
+    keyFeatures: [
+      "AI-powered recommendations",
+      "Intuitive user interface",
+      "Seamless integration with travel services"
+    ],
+    figmaimg: ['/assets/company/ResApp-MobileSection.png', '/assets/company/TB-Components.png', '/assets/company/TB-Mobile-Features.png', '/assets/company/TB-App.png'],
     date: '2024-01-15',
     link: 'https://travelbuddy-demo.com',
+    figmaLink: 'https://www.figma.com/design/jwKUkFEj6WmTKHI1h6dgb6/Chas-s-cases?node-id=0-1&t=IeyPi2C3NlU7n26c-1',
     challenge: 'Creating an intuitive travel planning experience that helps users organize complex itineraries while maintaining simplicity.',
     solution: 'Developed a user-centered design approach with extensive user research, prototyping, and iterative testing to create an seamless travel planning interface.',
     results: ['Improved user engagement by 40%', 'Reduced planning time by 60%', 'Achieved 95% user satisfaction score']
@@ -52,14 +75,28 @@ export const projects: Project[] = [
     fullDescription: 'Deepen the knowledge and ability to develop interfaces for both mobile applications and websites using the ReactJS framework. The focus is on optimizing user experience and creating responsive, modern designs.',
     category: 'E-commerce Development',
     image: '/assets/company/Ws-banner.png',
-    images: ['/assets/project-mobile.jpg', '/assets/project-portfolio.jpg'],
+    images: ['/assets/company/Shoes&stiches1.png', '/assets/company/Shoes&stiches2.png', '/assets/company/Shoes&stiches3.png'],
     tools: ['Figma', 'HTML&CSS', 'React JS', 'TailwindCSS', 'Firebase'],
     status: 'live',
+    myrole: 'Figma Wireframe, Front End Developer',
+    assignmentdescription: 'Develop the front-end of the e-commerce platform using React and TailwindCSS, ensuring a responsive and user-friendly design.',
+    assignmentimg: ['/assets/project-ecommerce.jpg', '/assets/project-dashboard.jpg'],
+    conclusion: [
+      "The project successfully created a seamless shopping experience across devices.",
+      "User feedback highlighted the intuitive design and ease of navigation.",
+      "The use of modern technologies ensured high performance and scalability."
+    ],
+    keyFeatures: [
+      "User-friendly interface",
+      "Real-time collaboration",
+      "Advanced analytics dashboard"
+    ],
+    figmaimg: ['/assets/company/Ws-lofil.png', '/assets/company/Ws-components.png', '/assets/company/Ws-desktop.png'],
     date: '2024-06-15',
     link: 'https://shoes-stitches-demo.com',
     liveLink: 'https://shoes-stitches-demo.com',
-    githubLink: 'https://github.com/patdahl',
-    figmaLink: 'https://figma.com/design/shoes-stitches',
+    githubLink: 'https://github.com/Swifty-sketch/webshop',
+    figmaLink: 'https://www.figma.com/design/jwKUkFEj6WmTKHI1h6dgb6/Chas-s-cases?node-id=1-15266&t=IeyPi2C3NlU7n26c-1',
     challenge: 'Building a modern e-commerce platform that provides excellent user experience across all devices while maintaining high performance.',
     solution: 'Implemented a responsive design system with React and Firebase backend, focusing on mobile-first approach and seamless checkout flow.',
     results: ['Mobile conversion rate increased by 35%', 'Page load time reduced by 50%', 'Customer satisfaction rating: 4.8/5']
@@ -72,12 +109,26 @@ export const projects: Project[] = [
     fullDescription: 'Advanced Interaction Design: A deep dive into UX design focusing on user analysis, requirements management, and the design process. The goal is to translate complex user needs into intuitive digital solutions.',
     category: 'UX Design',
     image: '/assets/company/ft-bg.png',
-    images: ['/assets/company/ft-bg.png', '/assets/company/ft-bg.png'],
+    images: ['/assets/company/ft-bg.png', '/assets/company/Mockup-Kalender.png', '/assets/company/Mockup-SmallbarnProfile.png', '/assets/company/Mockup-Skapauppgifter.png'],
     tools: ['Figma', 'Figjam', 'Slack'],
+    myrole: 'User research, Wireframing, Prototyping, Testing',
     status: 'case-study',
+    assignmentdescription: 'Conduct user research, create wireframes and prototypes, and perform usability testing for a task management application.',
+    assignmentimg: ['/assets/project-wireframes.jpg', '/assets/project-prototypes.jpg'],
+    conclusion: [
+      "The project successfully addressed the unique workflow needs of professional women.",
+      "User feedback indicated a high level of satisfaction with the new design.",
+      "The iterative design process allowed for continuous improvement based on user testing."
+    ],
+    keyFeatures: [
+      "User-friendly interface",
+      "Real-time collaboration",
+      "Advanced analytics dashboard"
+    ],
+    figmaimg: ['/assets/company/FT_Lo-fil.png', '/assets/company/FT_StyleGuide.png', '/assets/company/Mockup-Skapauppgifter.png', '/assets/company/Mockup-Skapamål.png'],
     date: '2024-08-15',
     link: '',
-    figmaLink: 'https://figma.com/design/femtask',
+    figmaLink: 'https://www.figma.com/design/jwKUkFEj6WmTKHI1h6dgb6/Chas-s-cases?node-id=1-10454&t=IeyPi2C3NlU7n26c-1',
     challenge: 'Designing a task management system that caters specifically to professional women, addressing their unique workflow needs.',
     solution: 'Conducted extensive user research and created detailed personas to design an intuitive task management interface with advanced collaboration features.',
     results: ['User task completion rate improved by 45%', 'Daily active users increased by 70%', 'Reduced learning curve by 3 days']

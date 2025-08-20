@@ -34,8 +34,8 @@ export const projects: Project[] = [
     description: 'Work professionally as a UX/UI designer with Front End skills. Translate user needs into a finished product or service. Use agile methods to participate in projects and work processes.',
     fullDescription: 'Work professionally as a UX/UI designer with Front End skills. Translate user needs into a finished product or service. Use agile methods to participate in projects and work processes.',
     category: 'UX/UI Design & Development',
-  image: '/assets/company/ReseApp.png',
-  images: ['/assets/project-ecommerce.jpg', '/assets/project-dashboard.jpg'],
+    image: '/assets/company/ReseApp.png',
+    images: ['/assets/project-ecommerce.jpg', '/assets/project-dashboard.jpg'],
     tools: ['Figma', 'Figjam', 'React JS', 'Discord', 'TailwindCSS'],
     status: 'case-study',
     date: '2024-01-15',
@@ -51,8 +51,8 @@ export const projects: Project[] = [
     description: 'Deepen the knowledge and ability to develop interfaces for both mobile applications and websites using the ReactJS framework. The focus is on optimizing user experience and creating responsive, modern designs.',
     fullDescription: 'Deepen the knowledge and ability to develop interfaces for both mobile applications and websites using the ReactJS framework. The focus is on optimizing user experience and creating responsive, modern designs.',
     category: 'E-commerce Development',
-  image: '/assets/company/Ws-banner.png',
-  images: ['/assets/project-mobile.jpg', '/assets/project-portfolio.jpg'],
+    image: '/assets/company/Ws-banner.png',
+    images: ['/assets/project-mobile.jpg', '/assets/project-portfolio.jpg'],
     tools: ['Figma', 'HTML&CSS', 'React JS', 'TailwindCSS', 'Firebase'],
     status: 'live',
     date: '2024-06-15',
@@ -71,8 +71,8 @@ export const projects: Project[] = [
     description: 'Advanced Interaction Design: A deep dive into UX design focusing on user analysis, requirements management, and the design process. The goal is to translate complex user needs into intuitive digital solutions.',
     fullDescription: 'Advanced Interaction Design: A deep dive into UX design focusing on user analysis, requirements management, and the design process. The goal is to translate complex user needs into intuitive digital solutions.',
     category: 'UX Design',
-  image: '/assets/company/ft-bg.png',
-  images: ['/assets/company/ft-bg.png', '/assets/company/ft-bg.png'],
+    image: '/assets/company/ft-bg.png',
+    images: ['/assets/company/ft-bg.png', '/assets/company/ft-bg.png'],
     tools: ['Figma', 'Figjam', 'Slack'],
     status: 'case-study',
     date: '2024-08-15',
@@ -102,42 +102,42 @@ export const testimonials: Testimonial[] = [
     quote: "Working with Pat was an exceptional experience. Their attention to detail and creative problem-solving skills transformed our vision into a stunning, user-friendly platform that exceeded all expectations.",
     name: "Nadia Johnson",
     title: "CEO at R&B AB",
-    image: "/src/assets/company/chatbot1.png"
+    image: "/assets/company/chatbot1.png"
   },
   {
     id: 2,
     quote: "Pat's expertise in UX/UI design is remarkable. They delivered a mobile app that not only looks beautiful but provides an intuitive user experience that our customers love. Highly recommended!",
     name: "Sara Connor",
     title: "Designer specialist at Chas Academy",
-    image: "/src/assets/company/chatbot1.png"
+    image: "/assets/company/chatbot1.png"
   },
   {
     id: 3,
     quote: "The e-commerce platform Pat designed for us resulted in a 40% increase in conversions. Their understanding of user behavior and business goals is outstanding.",
     name: "Emma Rodriguez",
     title: "Marketing Director at NRS Shop",
-    image: "/src/assets/company/chatbot1.png"
+    image: "/assets/company/chatbot1.png"
   },
   {
     id: 4,
     quote: "Pat's work on our corporate website was flawless. They managed to balance aesthetic appeal with functionality, creating a site that truly represents our brand values.",
     name: "Ulrica Persson",
     title: "Brand Manager at Ullis fitness",
-    image: "/src/assets/company/chatbot1.png"
+    image: "/assets/company/chatbot1.png"
   },
   {
     id: 5,
     quote: "As a startup, we needed someone who could understand our vision and translate it into a compelling digital experience. Pat delivered beyond our expectations with creativity and professionalism.",
     name: "Lisa Park",
     title: "Founder at ULO web agency",
-    image: "/src/assets/company/chatbot1.png"
+    image: "/assets/company/chatbot1.png"
   },
   {
     id: 6,
     quote: "Pat's design thinking approach helped us solve complex user experience challenges. The result was a dashboard that our users find both powerful and easy to use.",
     name: "Creata K",
     title: "Specialist at DataInsights",
-    image: "/src/assets/company/chatbot1.png"
+    image: "/assets/company/chatbot1.png"
   }
 ];
 
@@ -146,21 +146,21 @@ export const Approachs = [
     id: 1,
     title: "User-Focused, Data-Driven, and Seamlessly Integrated",
     icon: "UX/UI Design",
-    img: "/src/assets/creator.png",
+    img: "/assets/creator.png",
     des: "I create intuitive, user-centered designs by combining data insights and user feedback. My approach ensures designs are functional, visually appealing, and meet business goals while being adaptable through agile methodologies.",
   },
   {
     id: 2,
     title: "Clear, Engaging, and Performance-Optimized",
     icon: "Web Design",
-    img: "/src/assets/web.png",
+    img: "/assets/web.png",
     des: "I design responsive, mobile-first websites that focus on speed, clear navigation, and user engagement. By optimizing for performance and SEO, I ensure your website is both attractive and effective at converting visitors.",
   },
   {
     id: 3,
     title: "Collaborative, Iterative, and Results-Driven",
     icon: "UI/UX Web Design",
-    img: "/src/assets/backend.png",
+    img: "/assets/backend.png",
     des: "I work closely with clients and users, using an iterative approach to refine designs based on feedback. I focus on clarity, usability, and adaptability to deliver results that improve engagement, conversions, and overall user satisfaction.",
   },
 ];

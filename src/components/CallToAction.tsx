@@ -1,4 +1,4 @@
-import { ArrowRight, Mail, Calendar } from 'lucide-react';
+import { ArrowRight, Mail } from 'lucide-react';
 
 const CallToAction = () => {
   return (

@@ -174,7 +174,7 @@ export const socialMedia = [
   {
     id: 2,
     img: "/link.svg",
-    link: "https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile",
+    link: "https://www.linkedin.com/in/pat-dahl-7984b019a/",
   },
 ];
 

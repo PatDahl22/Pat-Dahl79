@@ -1,4 +1,63 @@
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+
 const Contact = () => {
+  const formRef = useRef();
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const { target } = e;
+    const { name, value } = target;
+
+    setForm({
+      ...form,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .send(
+        'service_wbmovm2',
+        'template_w4acalb',
+        {
+          from_name: form.name,
+          to_name: "Pattaravarat Dahl",
+          from_email: form.email,
+          to_email: "pattaravarat.dahl@gmail.com",
+          message: form.message,
+        },
+        'FO9OEVXccvSi0lJ8v'
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Thank you. I will get back to you as soon as possible.");
+
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          setLoading(false);
+          console.error(error);
+          alert("Ahh, something went wrong. Please try again.");
+        }
+      );
+  };
+  
+
   return (
     <section id="contact" className="py-20 lg:py-32 px-6 lg:px-8 bg-tertiary">
       <div className="max-w-6xl mx-auto">
@@ -50,7 +109,7 @@ const Contact = () => {
               <h4 className="text-lg font-semibold text-text-primary">Connect with me</h4>
               <div className="flex space-x-4">
                 <a
-                  href="https://linkedin.com/in/patdahl"
+                  href="https://www.linkedin.com/in/pat-dahl-7984b019a/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-card border border-border-light rounded-radius flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all group"
@@ -62,7 +121,7 @@ const Contact = () => {
                 </a>
                 
                 <a
-                  href="https://github.com/patdahl"
+                  href="https://github.com/patdahl22"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-card border border-border-light rounded-radius flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all group"
@@ -74,8 +133,7 @@ const Contact = () => {
                 </a>
 
                 <a
-                  href="/cv-pat-dahl.pdf"
-                  target="_blank"
+                  href="https://drive.google.com/file/d/1-s852I1L5L7vZIuBqK0qnzbhcMBDKkrl/view?usp=drive_link"                  target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-card border border-border-light rounded-radius flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all group"
                   title="Download CV"
@@ -90,7 +148,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="bg-card border border-border-light rounded-radius-lg p-8">
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-text-primary mb-2">
                   Your Name
@@ -99,8 +157,11 @@ const Contact = () => {
                   type="text"
                   id="name"
                   name="name"
+                  value={form.name}
+                  onChange={handleChange}
                   className="w-full px-4 py-3 bg-input border border-border rounded-radius text-text-primary placeholder-text-muted focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
                   placeholder="Enter your name"
+                  required
                 />
               </div>
 
@@ -112,8 +173,11 @@ const Contact = () => {
                   type="email"
                   id="email"
                   name="email"
+                  value={form.email}
+                  onChange={handleChange}
                   className="w-full px-4 py-3 bg-input border border-border rounded-radius text-text-primary placeholder-text-muted focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
                   placeholder="Enter your email"
+                  required
                 />
               </div>
 
@@ -125,16 +189,20 @@ const Contact = () => {
                   id="message"
                   name="message"
                   rows={5}
+                  value={form.message}
+                  onChange={handleChange}
                   className="w-full px-4 py-3 bg-input border border-border rounded-radius text-text-primary placeholder-text-muted focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors resize-none"
                   placeholder="Tell me about your project..."
+                  required
                 ></textarea>
               </div>
 
               <button
                 type="submit"
                 className="w-full cta-button py-3 px-6 font-medium rounded-radius transition-all hover:shadow-lg"
+                disabled={loading}
               >
-                Send Message
+                {loading ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>

@@ -109,27 +109,32 @@ export const projects: Project[] = [
     fullDescription: 'Advanced Interaction Design: A deep dive into UX design focusing on user analysis, requirements management, and the design process. The goal is to translate complex user needs into intuitive digital solutions.',
     category: 'UX Design',
     image: '/assets/company/ft-bg.png',
-    images: ['/assets/company/ft-bg.png', '/assets/company/Mockup-Kalender.png', '/assets/company/Mockup-SmallbarnProfile.png', '/assets/company/Mockup-Skapauppgifter.png'],
+    images: ['/assets/company/FT-banner.png', '/assets/company/Mockup-SmallbarnProfile.png', '/assets/company/Mockup-FöräldrarProfile.png', '/assets/company/Mockup-BarnProfile.png'],
     tools: ['Figma', 'Figjam', 'Slack'],
     myrole: 'User research, Wireframing, Prototyping, Testing',
     status: 'case-study',
     assignmentdescription: 'Conduct user research, create wireframes and prototypes, and perform usability testing for a task management application.',
     assignmentimg: ['/assets/project-wireframes.jpg', '/assets/project-prototypes.jpg'],
     conclusion: [
-      "The project successfully addressed the unique workflow needs of professional women.",
-      "User feedback indicated a high level of satisfaction with the new design.",
-      "The iterative design process allowed for continuous improvement based on user testing."
+      "FamTask is designed for busy parents and children, with a simple interface that reduces complexity and makes task management easier.",
+      "A clear visual hierarchy and color-coded tasks guide attention and help identify responsibilities quickly.",
+      "The child-friendly yet balanced aesthetic engages kids while still appealing to adults. This ensures that children can interact with the app effectively while catering to the preferences of adult users.",
+      "Features like progress tracking and visual cues (e.g., checkboxes) provide feedback, motivate users, and foster a sense of accomplishment."
     ],
     keyFeatures: [
       "User-friendly interface",
-      "Real-time collaboration",
-      "Advanced analytics dashboard"
+      "Shared Checklists",
+      "Automated Reminders",
+      "Color-Coded Task System",
+      "Motivational Reward System",
+      "Progress Tracking",
+      "Customizable Notifications",
     ],
-    figmaimg: ['/assets/company/FT_Lo-fil.png', '/assets/company/FT_StyleGuide.png', '/assets/company/Mockup-Skapauppgifter.png', '/assets/company/Mockup-Skapamål.png'],
+    figmaimg: ['/assets/company/FT_Lo-fil.png', '/assets/company/Persona.png', '/assets/company/FT-Icons.png', '/assets/company/FT-Colors.png', '/assets/company/Mockup-Skapauppgifter.png', '/assets/company/Mockup-Kalender.png'],
     date: '2024-08-15',
-    link: '',
-    figmaLink: 'https://www.figma.com/design/jwKUkFEj6WmTKHI1h6dgb6/Chas-s-cases?node-id=1-10454&t=IeyPi2C3NlU7n26c-1',
-    challenge: 'Designing a task management system that caters specifically to professional women, addressing their unique workflow needs.',
+    link: 'https://www.figma.com/proto/jwKUkFEj6WmTKHI1h6dgb6/Chas-s-cases?node-id=128-18044&viewport=-3550%2C-6994%2C0.5&t=93aTMy9a327QduC5-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=128%3A18044',
+    figmaLink: 'https://www.figma.com/proto/jwKUkFEj6WmTKHI1h6dgb6/Chas-s-cases?node-id=128-18044&viewport=-3550%2C-6994%2C0.5&t=93aTMy9a327QduC5-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=128%3A18044',
+    challenge: 'Designing a task management system that caters specifically to professional users, addressing their unique workflow needs.',
     solution: 'Conducted extensive user research and created detailed personas to design an intuitive task management interface with advanced collaboration features.',
     results: ['User task completion rate improved by 45%', 'Daily active users increased by 70%', 'Reduced learning curve by 3 days']
   }

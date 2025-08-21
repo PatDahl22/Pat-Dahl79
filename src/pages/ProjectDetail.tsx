@@ -1,10 +1,12 @@
 import { useParams, Link } from 'react-router-dom';
 import { getProjectBySlug } from '@/data';
+import React, { useState } from 'react';
 
 const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const project = slug ? getProjectBySlug(slug) : undefined;
-  
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   if (!slug || !project) {
     return (
       <div className="min-h-screen bg-background">
@@ -150,7 +152,8 @@ const ProjectDetail = () => {
                     key={index}
                     src={image}
                     alt={`${project.title} screenshot ${index + 1}`}
-                    className="w-full rounded-radius-lg shadow-lg"
+                    className="w-full max-w-[550px] h-[420px] object-cover rounded-radius-lg shadow-lg cursor-pointer mx-auto"
+                    onClick={() => setSelectedImage(image)}
                   />
                 ))}
               </div>
@@ -198,7 +201,8 @@ const ProjectDetail = () => {
                     key={index}
                     src={image}
                     alt={`${project.title} screenshot ${index + 1}`}
-                    className="w-full rounded-radius-lg shadow-lg"
+                    className="w-full max-w-[550px] h-[420px] object-cover rounded-radius-lg shadow-lg cursor-pointer mx-auto"
+                    onClick={() => setSelectedImage(image)}
                   />
                 ))}
               </div>
@@ -220,8 +224,21 @@ const ProjectDetail = () => {
             </Link>
           </div>
         </section>
-      </main>
-    </div>
+      {/* Overlay for enlarged image */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 cursor-zoom-out"
+          onClick={() => setSelectedImage(null)}
+        >
+          <img
+            src={selectedImage}
+            alt="Enlarged project"
+            className="max-w-3xl max-h-[80vh] rounded-lg shadow-2xl border-4 border-white"
+          />
+        </div>
+      )}
+    </main>
+  </div>
   );
 };
 

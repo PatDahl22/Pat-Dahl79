@@ -40,8 +40,8 @@ export const projects: Project[] = [
     description: 'Work professionally as a UX/UI designer with Front End skills. Translate user needs into a finished product or service. Use agile methods to participate in projects and work processes.',
     fullDescription: 'Work professionally as a UX/UI designer with Front End skills. Translate user needs into a finished product or service. Use agile methods to participate in projects and work processes.',
     category: 'UX/UI Design & Development',
-    image: '/assets/company/ReseApp.png',
-    images: ['/assets/company/TB-Mobile-Features.png', '/assets/company/TB-App.png'],
+    image: '/assets/company/TB-Hero.png',
+    images: ['/assets/company/TB-Tablet.png', '/assets/company/TB-Desktop.png', '/assets/company/TB-Mobile.png', '/assets/company/TB-Hero.png'],
     tools: ['Figma', 'Figjam', 'React JS', 'Discord'],
     status: 'case-study',
     myrole: 'User research, Usability testing, Wireframes and prototypes',
@@ -59,7 +59,7 @@ export const projects: Project[] = [
       "Intuitive user interface",
       "Seamless integration with travel services"
     ],
-    figmaimg: ['/assets/company/ResApp-MobileSection.png', '/assets/company/TB-Components.png', '/assets/company/TB-Mobile-Features.png', '/assets/company/TB-App.png'],
+    figmaimg: ['/assets/company/TB-Style.png', '/assets/company/TB-Components.png', '/assets/company/TB-Problem&Solutions.png', '/assets/company/TB-Persona.png'],
     date: '2024-01-15',
     link: 'https://travelbuddy-demo.com',
     figmaLink: 'https://www.figma.com/design/jwKUkFEj6WmTKHI1h6dgb6/Chas-s-cases?node-id=0-1&t=IeyPi2C3NlU7n26c-1',
@@ -75,7 +75,7 @@ export const projects: Project[] = [
     fullDescription: 'Deepen the knowledge and ability to develop interfaces for both mobile applications and websites using the ReactJS framework. The focus is on optimizing user experience and creating responsive, modern designs.',
     category: 'E-commerce Development',
     image: '/assets/company/Ws-banner.png',
-    images: ['/assets/company/Shoes&stiches1.png', '/assets/company/Shoes&stiches2.png', '/assets/company/Shoes&stiches3.png'],
+    images: ['/assets/company/View.png', '/assets/company/ProductList.png', '/assets/company/Inloggning.png', '/assets/company/Handlings.png', '/assets/company/HandlingOfOrders.png', '/assets/company/ProtectAPI.png'],
     tools: ['Figma', 'HTML&CSS', 'React JS', 'TailwindCSS', 'Firebase'],
     status: 'live',
     myrole: 'Figma Wireframe, Front End Developer',
@@ -87,11 +87,11 @@ export const projects: Project[] = [
       "The use of modern technologies ensured high performance and scalability."
     ],
     keyFeatures: [
-      "User-friendly interface",
-      "Real-time collaboration",
-      "Advanced analytics dashboard"
+      "Product list and filtering: Grid-displayed format with images, prices and short descriptions. Products-filter based on category, price range or size.",
+      "Responsive design: Ensured a seamless shopping experience across devices with a mobile-first approach.",
+      "Smooth shopping cart flow: Simplified the checkout process with a clear and intuitive interface, reducing cart abandonment rates."
     ],
-    figmaimg: ['/assets/company/Ws-lofil.png', '/assets/company/Ws-components.png', '/assets/company/Ws-desktop.png'],
+    figmaimg: ['/assets/company/Ws-lofil.png', '/assets/company/Ws-Style.png', '/assets/company/Ws-Wireframe.png', '/assets/company/Ws-Wireframe2.png'],
     date: '2024-06-15',
     link: 'https://shoes-stitches-demo.com',
     liveLink: 'https://shoes-stitches-demo.com',

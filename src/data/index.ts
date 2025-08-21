@@ -137,6 +137,39 @@ export const projects: Project[] = [
     challenge: 'Designing a task management system that caters specifically to professional users, addressing their unique workflow needs.',
     solution: 'Conducted extensive user research and created detailed personas to design an intuitive task management interface with advanced collaboration features.',
     results: ['User task completion rate improved by 45%', 'Daily active users increased by 70%', 'Reduced learning curve by 3 days']
+  },
+  {
+    id: 4,
+    slug: 'ullis-fitness',
+    title: 'Ullis Fitness & Kroppsvård',
+    description: 'A modern website for Ullis Fitness & Kroppsvård.',
+    fullDescription: 'A modern, responsive website for Ullis Fitness & Kroppsvård, focusing on user experience and clear presentation of services.',
+    category: 'Web Development',
+    image: '/assets/company/ullis-banner.png', // update with your image path
+    images: ['/assets/company/ullis-banner.png'], // add more images if needed
+    tools: ['Figma', 'React JS', 'TailwindCSS', 'TypeScript'],
+    status: 'live',
+    myrole: 'Web design, Front End Developer',
+    assignmentdescription: 'Developed a business website for a fitness and wellness company.',
+    assignmentimg: [],
+    conclusion: [
+      'The website improved online presence and client engagement.',
+      'Mobile-friendly design increased accessibility for all users.'
+    ],
+    keyFeatures: [
+      'Service listing',
+      'Contact form',
+      'Responsive design'
+    ],
+    figmaimg: [],
+    date: '2025-08-21',
+    link: 'https://ullisfitnessochkroppsvard.com/',
+    liveLink: 'https://ullisfitnessochkroppsvard.com/',
+    githubLink: 'https://github.com/PatDahl22/ullis-fitness22.git',
+    figmaLink: '',
+    challenge: 'Create a user-friendly and visually appealing business website.',
+    solution: 'Designed and developed a responsive site with clear navigation and service information.',
+    results: ['Increased client inquiries', 'Positive feedback from users']
   }
 ];
 

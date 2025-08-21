@@ -142,34 +142,93 @@ export const projects: Project[] = [
     id: 4,
     slug: 'ullis-fitness',
     title: 'Ullis Fitness & Kroppsvård',
-    description: 'A modern website for Ullis Fitness & Kroppsvård.',
-    fullDescription: 'A modern, responsive website for Ullis Fitness & Kroppsvård, focusing on user experience and clear presentation of services.',
-    category: 'Web Development',
+    description: 'Website redesign to unify personal training, massage, and cupping services into a cohesive, professional, and user-friendly digital presence.',
+    fullDescription: 'This project focused on redesigning the Ullis Fitness & Kroppsvård website to present personal training, massage, and cupping treatments in a clear and professional way. The goal was to simplify the booking flow, improve navigation, and create a consistent visual identity that builds trust and attracts both individual clients and companies.',
+    category: 'UX/UI Design, Web Design',
     image: '/assets/company/ullis-banner.png', // update with your image path
     images: ['/assets/company/ullis-banner.png'], // add more images if needed
-    tools: ['Figma', 'React JS', 'TailwindCSS', 'TypeScript'],
+    tools: ['Figma', 'Next.JS', 'TailwindCSS', 'TypeScript'],
     status: 'live',
-    myrole: 'Web design, Front End Developer',
-    assignmentdescription: 'Developed a business website for a fitness and wellness company.',
+    myrole: 'Solo Web design & Front End Developer',
+    assignmentdescription: 'Redesign an existing fitness and massage website to improve clarity, usability, and booking experience while presenting cupping as a new service.',
     assignmentimg: [],
     conclusion: [
-      'The website improved online presence and client engagement.',
-      'Mobile-friendly design increased accessibility for all users.'
+      "The redesign resulted in a professional and cohesive digital presence.",
+      "Customers can now easily understand the offered services and booking process.",
+      "The website strengthens the brand identity and communicates trust to new and existing clients."
     ],
-    keyFeatures: [
-      'Service listing',
-      'Contact form',
-      'Responsive design'
+     keyFeatures: [
+      "Responsive web design",
+      "Clear and professional service descriptions",
+      "Simplified booking flow",
+      "Consistent typography and colors",
+      "Integrated cupping treatments with massage",
+      "User-friendly navigation"
     ],
     figmaimg: [],
-    date: '2025-08-21',
+    date: '2025-07-11',
     link: 'https://ullisfitnessochkroppsvard.com/',
     liveLink: 'https://ullisfitnessochkroppsvard.com/',
     githubLink: 'https://github.com/PatDahl22/ullis-fitness22.git',
     figmaLink: '',
-    challenge: 'Create a user-friendly and visually appealing business website.',
-    solution: 'Designed and developed a responsive site with clear navigation and service information.',
-    results: ['Increased client inquiries', 'Positive feedback from users']
+    challenge: 'The previous website suffered from inconsistent typography and colors, unclear navigation, and a confusing booking process. Customers were unsure how to book treatments and had limited understanding of cupping services.',
+    solution: 'Conducted UX research and restructured the website with a clear navigation system, consistent design language, and simplified booking flow. Added clear explanations of services, including cupping, to educate and attract new customers.',
+    results: [
+      'Improved booking clarity and reduced customer confusion',
+      'Professional and consistent brand identity',
+      'Positive client feedback on navigation and design'
+    ],
+  },
+  {
+    id: 5,
+    slug: 'ulo',
+    title: 'ULO Web Agency Platform',
+    description: 'A digital platform combining web agency services with e-commerce functionality, designed to simplify processes for clients while maintaining a personal connection.',
+    fullDescription: 'The ULO project was my final exam project, where I designed and developed a platform for ULO Webbyrå. The aim was to merge traditional web agency services with e-commerce, making it easier for small and mid-sized businesses to purchase digital solutions directly online. The platform emphasizes simplicity, intuitive navigation, and a stylish, modern aesthetic that reflects ULO’s professional identity while ensuring scalability for future services and products.',
+    category: 'UX/UI Design, Web Development',
+    image: '/assets/company/ulo-bg.png',
+    images: [
+      '/assets/company/ulo-home.png',
+      '/assets/company/ulo-services.png',
+      '/assets/company/ulo-ecommerce.png',
+      '/assets/company/ulo-contact.png'
+    ],
+    tools: ['Figma', 'FigJam', 'Next.js', 'TypeScript', 'TailwindCSS'],
+    myrole: 'UX Research, Wireframing, UI Design, Frontend Development',
+    status: 'case-study',
+    assignmentdescription: 'Design and develop a web platform for ULO Webbyrå that combines agency services with e-commerce functionality in a professional and user-friendly way.',
+    assignmentimg: [
+      '/assets/project-ulo-wireframes.jpg',
+      '/assets/project-ulo-prototypes.jpg'
+    ],
+    challenge: 'Create a platform that balances e-commerce efficiency with the personal touch of a creative agency. Ensure clarity, easy navigation, and a strong brand identity while supporting future scalability.',
+    solution: 'Conducted competitor analysis, defined user needs, and created wireframes and prototypes in Figma. Developed the platform using Next.js, TypeScript, and TailwindCSS with a clean, modular design system. Integrated service pages, e-commerce structure, and a clear contact flow to encourage direct client interaction.',
+    keyFeatures: [
+      "Service catalog with clear descriptions",
+      "E-commerce functionality for digital products",
+      "Clean and modern UI",
+      "Responsive and accessible design",
+      "Simple navigation structure",
+      "Scalable architecture for future services"
+    ],
+    conclusion: [
+      "The platform provides a professional yet personal digital presence for ULO Webbyrå.",
+      "It combines the convenience of e-commerce with the relational trust of a web agency.",
+      "The project demonstrates both UX/UI design and frontend development skills, creating a foundation for future growth."
+    ],
+    results: [
+      'Improved clarity of services for clients',
+      'Professional and stylish platform reflecting ULO’s brand',
+      'Flexible foundation ready for scaling and new features'
+    ],
+    figmaimg: [
+      '/assets/company/ulo-wireframes.png',
+      '/assets/company/ulo-styleguide.png',
+      '/assets/company/ulo-prototypes.png'
+    ],
+    date: '2025-04-15',
+    liveLink: 'https://ulo-webbyro.netlify.app/',
+    figmaLink: ''
   }
 ];
 

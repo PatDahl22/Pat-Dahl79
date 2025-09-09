@@ -39,11 +39,12 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo/Name */}
-          <a 
+          <a
             href="/"
-            className="text-xl lg:text-2xl font-bold text-text-primary cursor-pointer"
+            className="flex items-center text-xl lg:text-2xl font-bold text-text-primary cursor-pointer"
             onClick={() => scrollToSection('hero')}
           >
+            <img src="/Logo.png" alt="logo" className="h-8 w-8 mr-2" />
             Pat Dahl
           </a>
 

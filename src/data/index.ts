@@ -30,6 +30,7 @@ export interface Project {
   conclusion: string[];
   figmaimg: string[];
   keyFeatures: string[];
+  figmaWireframe?: { img?: string; title: string; description: string | string[] }[];
 }
 
 export const projects: Project[] = [
@@ -60,6 +61,14 @@ export const projects: Project[] = [
       "Seamless integration with travel services"
     ],
     figmaimg: ['/assets/company/TB-Style.png', '/assets/company/TB-Components.png', '/assets/company/TB-Problem&Solutions.png', '/assets/company/TB-Persona.png'],
+    figmaWireframe: [
+      {
+        img: "/TB-Mobile/role-icons6.png",
+        title: "Name: David - Business Traveler",
+        description:
+          "I travel frequently for work and need to book flights, hotels, and transportation at the last minute. I use apps and online booking services to make my reservations and keep track of my travel plans.",
+      },
+    ],
     date: '2024-01-15',
     link: 'https://travelbuddy-demo.com',
     figmaLink: 'https://www.figma.com/design/jwKUkFEj6WmTKHI1h6dgb6/Chas-s-cases?node-id=0-1&t=IeyPi2C3NlU7n26c-1',
@@ -145,8 +154,8 @@ export const projects: Project[] = [
     description: 'Website redesign to unify personal training, massage, and cupping services into a cohesive, professional, and user-friendly digital presence.',
     fullDescription: 'This project focused on redesigning the Ullis Fitness & Kroppsvård website to present personal training, massage, and cupping treatments in a clear and professional way. The goal was to simplify the booking flow, improve navigation, and create a consistent visual identity that builds trust and attracts both individual clients and companies.',
     category: 'UX/UI Design, Web Design',
-    image: '/assets/company/ullis-banner.png', // update with your image path
-    images: ['/assets/company/ullis-banner.png'], // add more images if needed
+    image: '/assets/ullis/ullis-banner.png',
+    images: ['/assets/ullis/ullis-banner.png'],
     tools: ['Figma', 'Next.JS', 'TailwindCSS', 'TypeScript'],
     status: 'live',
     myrole: 'Solo Web design & Front End Developer',
@@ -166,6 +175,61 @@ export const projects: Project[] = [
       "User-friendly navigation"
     ],
     figmaimg: [],
+    figmaWireframe: [
+      {
+        img: "/assets/ullis/Hi-file_home.png",
+        title: "The home page serves as the main entry point and highlights the brand's core offerings. It includes:",
+        description:[
+          "A clear hero section with a headline, CTA, and service categories.",
+          "A section showcasing key services (massage, training, body care).",
+          "A blog preview to position the brand as a knowledge source.",
+          "A personal introduction to build trust.",
+          "Customer testimonials and a business section for corporate clients."
+        ]
+      },
+      {
+        img: "/assets/ullis/Hi-file_about.png",
+        title: "The About page focuses on credibility and trust. It features:",
+        description:[
+          "A personal introduction with photo and welcome message.",
+          "Education & certifications presented in a card layout for easy scanning.",
+          "A clear philosophy section highlighting values (individual approach, holistic balance, long-term growth).",
+          "A timeline (“My Journey”) that visualizes personal and professional milestones.",
+          "Additional lifestyle elements to humanize the brand."
+        ]
+      },
+      {
+        img: "/assets/ullis/Hi-file_treatments.png",
+        title: "The treatments page provides a clear and structured overview of all services. It includes:",
+        description:[
+          "ASeparate categories (training, massage, wellness).",
+          "Service cards with descriptions, durations, and prices.",
+          "Package deals for customers seeking bundled options.",
+          "Clear booking CTAs to encourage conversion.",
+          "Visual elements (icons, images) to enhance understanding."]
+      },
+      {
+        img: "/assets/ullis/Hi-file_blogg.png",
+        title: "The blog functions as a knowledge hub and marketing tool. Its structure includes:",
+        description:[
+          "A featured article to draw attention.",
+          "A grid of recent posts with images, categories, and previews.",
+          "Filters and tags to help users explore relevant topics.",
+          "A newsletter subscription box to encourage ongoing engagement.",
+        ]
+      },
+      {
+        img: "/assets/ullis/Hi-file_contact.png",
+        title: "The contact page makes it easy for users to get in touch. It contains:",
+        description:[
+          "Contact details (address, phone, email, opening hours).",
+          "A contact form with drop-down for service type.",
+          "A dedicated corporate client section highlighting B2B offers.",
+          "A FAQ section addressing common questions.",
+          "An integrated map with directions for easy navigation.",
+        ]
+      },
+    ],
     date: '2025-07-11',
     link: 'https://ullisfitnessochkroppsvard.com/',
     liveLink: 'https://ullisfitnessochkroppsvard.com/',
@@ -218,7 +282,7 @@ export const projects: Project[] = [
     ],
     results: [
       'Improved clarity of services for clients',
-      'Professional and stylish platform reflecting ULO’s brand',
+      'Professional and stylish platform reflecting ULO\'s brand',
       'Flexible foundation ready for scaling and new features'
     ],
     figmaimg: [

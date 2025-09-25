@@ -141,11 +141,11 @@ const ProjectDetail = () => {
           </div>
         </section>
 
-        {/* Project Images */}
+        {/* Project's Research */}
         {project.figmaimg.length > 1 && (
           <section className="py-16 px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
-              <h3 className="text-2xl font-bold text-text-primary mb-8 text-center">Figma Wireframes</h3>
+              <h3 className="text-2xl font-bold text-text-primary mb-8 text-center">Project's Research</h3>
               <div className="grid md:grid-cols-2 gap-8">
                 {project.figmaimg.map((image, index) => (
                   <img
@@ -155,6 +155,45 @@ const ProjectDetail = () => {
                     className="w-full max-w-[550px] h-[420px] object-cover rounded-radius-lg shadow-lg cursor-pointer mx-auto"
                     onClick={() => setSelectedImage(image)}
                   />
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Figma Wireframes */}
+        {project.figmaWireframe.length > 1 && (
+          <section className="py-16 px-6 lg:px-8">
+            <div className="max-w-6xl mx-auto">
+              <h3 className="text-2xl font-bold text-text-primary mb-8 text-center">Figma Wireframes</h3>
+              <div className="grid md:grid-cols-1 gap-8">
+                {project.figmaWireframe.map((image, index) => (
+                  <div key={index} className='grid md:grid-cols-2 gap-8'>
+                    <img
+                      src={image.img}
+                      alt={`${image.title} wireframe ${index + 1}`}
+                      className="w-full max-w-[550px] h-[420px] object-cover rounded-radius-lg shadow-lg cursor-pointer mx-auto"
+                      onClick={() => setSelectedImage(image.img)}
+                    />
+                    <div className="text-start mt-2">
+                      <h4 className="text-lg font-semibold text-text-primary">{image.title}</h4>
+                      <div className="text-text-secondary">                
+                        <ul className="space-y-2 mt-2">
+                          {Array.isArray(image.description) ? image.description.map((desc, index) => (
+                            <li key={index} className="text-text-secondary flex items-start">
+                              <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                              {desc}
+                            </li>
+                          )) : (
+                            <li className="text-text-secondary flex items-start">
+                              <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                              {image.description}
+                            </li>
+                          )}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>

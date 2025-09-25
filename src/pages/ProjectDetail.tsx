@@ -148,13 +148,19 @@ const ProjectDetail = () => {
               <h3 className="text-2xl font-bold text-text-primary mb-8 text-center">Project's Research</h3>
               <div className="grid md:grid-cols-2 gap-8">
                 {project.figmaimg.map((image, index) => (
-                  <img
-                    key={index}
-                    src={image}
-                    alt={`${project.title} screenshot ${index + 1}`}
-                    className="w-full max-w-[550px] h-[420px] object-cover rounded-radius-lg shadow-lg cursor-pointer mx-auto"
-                    onClick={() => setSelectedImage(image)}
-                  />
+                  <div key={index}>
+                    <h4 className="text-lg font-semibold text-text-primary text-start mb-4">
+                      {typeof image === 'object' && image !== null && 'title' in image
+                        ? (Array.isArray(image.title) ? image.title.join(', ') : image.title)
+                        : ''}
+                    </h4>
+                    <img
+                      src={typeof image === 'string' ? image : image.img}
+                      alt={`${project.title} screenshot ${index + 1}`}
+                      className="w-full max-w-[550px] h-[420px] object-cover rounded-radius-lg shadow-lg cursor-pointer mx-auto"
+                      onClick={() => setSelectedImage(typeof image === 'string' ? image : image.img)}
+                    />
+                  </div>
                 ))}
               </div>
             </div>

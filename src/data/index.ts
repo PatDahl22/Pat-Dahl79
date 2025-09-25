@@ -28,9 +28,9 @@ export interface Project {
   assignmentdescription: string;
   assignmentimg: string[];
   conclusion: string[];
-  figmaimg: string[];
+  figmaimg: ({ img: string; title: string | string[]; description: string | string[] } | string)[];
   keyFeatures: string[];
-  figmaWireframe?: { img?: string; title: string; description: string | string[] }[];
+  figmaWireframe?: { img?: string; title: string | string[]; description: string | string[] }[];
 }
 
 export const projects: Project[] = [
@@ -41,13 +41,13 @@ export const projects: Project[] = [
     description: 'Work professionally as a UX/UI designer with Front End skills. Translate user needs into a finished product or service. Use agile methods to participate in projects and work processes.',
     fullDescription: 'Work professionally as a UX/UI designer with Front End skills. Translate user needs into a finished product or service. Use agile methods to participate in projects and work processes.',
     category: 'UX/UI Design & Development',
-    image: '/assets/company/TB-Hero.png',
-    images: ['/assets/company/TB-Tablet.png', '/assets/company/TB-Desktop.png', '/assets/company/TB-Mobile.png', '/assets/company/TB-Hero.png'],
+    image: '/assets/tb/TB-Hero.png',
+    images: ['/assets/tb/TB-Hero.png', '/assets/tb/TB-Desktop.png', '/assets/tb/TB-Tablet.png', '/assets/tb/TB-Mobile.png', ],
     tools: ['Figma', 'Figjam', 'React JS', 'Discord'],
     status: 'case-study',
     myrole: 'User research, Usability testing, Wireframes and prototypes',
     assignmentdescription: 'Create wireframes and prototypes for a travel planning application, conduct user research to gather insights, and perform usability testing to validate design decisions.',
-    assignmentimg: ['/assets/company/ResApp-MobileSection.png', '/assets/project-prototypes.jpg'],
+    assignmentimg: ['/assets/tb/ResApp-MobileSection.png', '/assets/project-prototypes.jpg'],
     conclusion: [
       "TravelBuddy is an ultimate personal travel guide, designed to inspire and assist you in discovering dining options, dream destinations, accommodations, and activities tailored to your preferences.",
       "By combining the power of AI with intuitive usability, personalized recommendations, and geolocation.",
@@ -60,13 +60,83 @@ export const projects: Project[] = [
       "Intuitive user interface",
       "Seamless integration with travel services"
     ],
-    figmaimg: ['/assets/company/TB-Style.png', '/assets/company/TB-Components.png', '/assets/company/TB-Problem&Solutions.png', '/assets/company/TB-Persona.png'],
+    figmaimg: [
+      {
+        img: "/assets/tb/TB-Problem&Solutions.png",
+        title: "TravelBuddy's Problem & Solutions",
+        description:[
+        ]
+      },
+      {
+        img: "/assets/tb/TB-Persona.png",
+        title: "TravelBuddy's Persona",
+        description:[
+        ]
+      },
+            {
+        img: "/assets/tb/TB-Style.png",
+        title: "TravelBuddy's Style Guide",
+        description:[
+        ]
+      },
+      {
+        img: "/assets/tb/TB-Components.png",
+        title: "TravelBuddy's Components",
+        description:[
+        ]
+      },
+    ],
     figmaWireframe: [
       {
-        img: "/TB-Mobile/role-icons6.png",
-        title: "Name: David - Business Traveler",
-        description:
-          "I travel frequently for work and need to book flights, hotels, and transportation at the last minute. I use apps and online booking services to make my reservations and keep track of my travel plans.",
+        img: "/assets/tb/Wireframes.png",
+        title: "The TravelBuddy wireframes were created to design a personalized travel assistant app, helping users plan and enjoy trips effortlessly. The focus was on onboarding, personalization, and usability across key flows such as login, profile creation, recommendations, and support.",
+        description:[
+        ]
+      },
+      {
+        img: "/assets/tb/Onboarding_Personalization.png",
+        title: "This flow builds user engagement right from the start by offering a customized journey.",
+        description:[
+          "A welcoming intro screen introduces the app's value.",
+          "New users can create a profile by entering details or logging in via Facebook/Google.",
+          "Personalization features include choosing favorite cuisines, travel interests, and preferences, ensuring tailored recommendations.",
+        ]
+      },
+      {
+        img: "/assets/tb/Authentication_Security.png",
+        title: "The authentication flow ensures user accounts are secure and personalized. It includes:",
+        description:[
+          "Includes login, sign-up, and password reset screens.",
+          "Confirmation states provide feedback (e.g., “Password reset successful”).",
+          "Multiple login options (email, social logins) make the process accessible and quick.",
+          "Robust security measures (e.g., CAPTCHA, two-factor authentication) protect user accounts."
+        ]
+      },
+      {
+        img: "/assets/tb/Profile_Settings.png",
+        title: "The profile settings page allows users to manage their personal information and preferences. It includes:",
+        description:[
+          "Profile screen displays user details and avatar.",
+          "Settings include appearance mode (dark/light), feedback options, and account deletion.",
+          "Editable profile fields (name, phone, email, preferences) allow users to update information easily.",
+        ]
+      },
+      {
+        img: "/assets/tb/Core_Features.png",
+        title: "The core features page showcases the app's main functionalities. It includes:",
+        description:[
+          "Travel assistant dashboard greets users personally and offers quick access to actions: Find your dream vacation, Places to stay nearby, Find food nearby and Experiences & activities.",
+          "An About page highlights app benefits and provides direct support via chat and contact info.",
+        ]
+      },
+      {
+        img: "/assets/tb/Feedback.png",
+        title: "Feedback & Ratings includes:",
+        description:[
+          "Users can rate their experience with the app.",
+          "A review system allows users to provide detailed feedback.",
+          "Incentives for users to leave feedback (e.g., discounts, rewards).",
+        ]
       },
     ],
     date: '2024-01-15',
@@ -83,8 +153,8 @@ export const projects: Project[] = [
     description: 'Deepen the knowledge and ability to develop interfaces for both mobile applications and websites using the ReactJS framework. The focus is on optimizing user experience and creating responsive, modern designs.',
     fullDescription: 'Deepen the knowledge and ability to develop interfaces for both mobile applications and websites using the ReactJS framework. The focus is on optimizing user experience and creating responsive, modern designs.',
     category: 'E-commerce Development',
-    image: '/assets/company/Ws-banner.png',
-    images: ['/assets/company/View.png', '/assets/company/ProductList.png', '/assets/company/Inloggning.png', '/assets/company/Handlings.png', '/assets/company/HandlingOfOrders.png', '/assets/company/ProtectAPI.png'],
+    image: '/assets/ws/Ws-banner.png',
+    images: ['/assets/ws/View.png', '/assets/ws/ProductList.png', '/assets/ws/Inloggning.png', '/assets/ws/Handlings.png', '/assets/ws/HandlingOfOrders.png', '/assets/ws/ProtectAPI.png'],
     tools: ['Figma', 'HTML&CSS', 'React JS', 'TailwindCSS', 'Firebase'],
     status: 'live',
     myrole: 'Figma Wireframe, Front End Developer',
@@ -100,7 +170,53 @@ export const projects: Project[] = [
       "Responsive design: Ensured a seamless shopping experience across devices with a mobile-first approach.",
       "Smooth shopping cart flow: Simplified the checkout process with a clear and intuitive interface, reducing cart abandonment rates."
     ],
-    figmaimg: ['/assets/company/Ws-lofil.png', '/assets/company/Ws-Style.png', '/assets/company/Ws-Wireframe.png', '/assets/company/Ws-Wireframe2.png'],
+    figmaimg: [
+      {
+        img: "/assets/ws/Ws-lofil.png",
+        title: "Shoes & Stitches Lo-fi Wireframes",
+        description:[
+        ]
+      },
+      {
+        img: "/assets/ws/Ws-Architecture.png",
+        title: "Shoes & Stitches Architecture",
+        description:[
+        ]
+      },
+      {
+        img: "/assets/ws/Ws-Userflow.png",
+        title: "Shoes & Stitches User Flow",
+        description:[
+        ]
+      },
+      {
+        img: "/assets/ws/Ws-Style.png",
+        title: "Shoes & Stitches Components",
+        description:[
+        ]
+      },
+    ],
+    figmaWireframe: [
+      {
+        img: "/assets/ws/Ws-Wireframe.png",
+        title: "Shoes & Stitches's wireframes were designed to structure a modern e-commerce experience for a fashion and footwear brand. The focus was on usability, product discoverability, and a smooth purchase flow. All wireframes include desktop and mobile versions to ensure responsiveness. It includes:",
+        description:[
+          "Home page with strong hero section with promotional messaging and CTA. Featured products to immediately showcase popular items. Visual brand storytelling through lifestyle imagery. A best sellers section to drive conversions with proven products. The home page balances inspiration and commerce, encouraging users to explore and shop.",
+          "Grid layout displaying multiple products in products listing page with clear images and prices. Filtering and sorting options to help users find items quickly and consistent product card design for easy scanning. This page is optimized for browsing and comparing products.",
+          "Large hero product image with multiple views in product detail page. Key details for example name, price, size selector, and “Add to Cart” button. Tabs for description, shipping info, and additional details and “You may also like” recommendations to encourage cross-selling. The design makes purchasing simple while keeping upsell opportunities visible.",
+          "Brand storytelling with mission, values, and history in About page. Content structured with images and text blocks for readability and focus on responsible fashion and credibility. This page builds trust and connects with users on a brand level.",
+        ]
+      },
+      {
+        img: "/assets/ws/Ws-Wireframe2.png",
+        title: "",
+        description:[
+          "Simple form for inquiries with fields for name, email, phone, and message in Contact page. Contact details and support info presented clearly and ensures users can reach out easily, reducing friction.",
+          "Streamlined checkout flow with customer details, shipping, and payment in Checkout and Confirmation page. Order summary always visible for transparency and final confirmation screen thanking the user and confirming their purchase. This ensures a smooth and trustworthy checkout experience, which is critical for conversions.",
+          "Shoes & Stitches's wireframes were designed to provide a clean, intuitive, and conversion-focused shopping experience. From homepage inspiration to product discovery and checkout, the flow prioritizes clarity, trust, and ease of use. The responsive layouts make the site accessible across devices, ensuring a consistent shopping journey.",
+        ]
+      },
+    ],
     date: '2024-06-15',
     link: 'https://shoes-stitches-demo.com',
     liveLink: 'https://shoes-stitches-demo.com',
@@ -117,7 +233,7 @@ export const projects: Project[] = [
     description: 'Advanced Interaction Design: A deep dive into UX design focusing on user analysis, requirements management, and the design process. The goal is to translate complex user needs into intuitive digital solutions.',
     fullDescription: 'Advanced Interaction Design: A deep dive into UX design focusing on user analysis, requirements management, and the design process. The goal is to translate complex user needs into intuitive digital solutions.',
     category: 'UX Design',
-    image: '/assets/company/ft-bg.png',
+    image: '/assets/company/FT-banner.png',
     images: ['/assets/company/FT-banner.png', '/assets/company/Mockup-SmallbarnProfile.png', '/assets/company/Mockup-FöräldrarProfile.png', '/assets/company/Mockup-BarnProfile.png'],
     tools: ['Figma', 'Figjam', 'Slack'],
     myrole: 'User research, Wireframing, Prototyping, Testing',
@@ -139,7 +255,104 @@ export const projects: Project[] = [
       "Progress Tracking",
       "Customizable Notifications",
     ],
-    figmaimg: ['/assets/company/FT_Lo-fil.png', '/assets/company/Persona.png', '/assets/company/FT-Icons.png', '/assets/company/FT-Colors.png', '/assets/company/Mockup-Skapauppgifter.png', '/assets/company/Mockup-Kalender.png'],
+    figmaimg: [
+      {
+        img: "/assets/company/FT_MoSCoW.png",
+        title: "FemTask's MoSCoW",
+        description:[
+        ]
+      },
+      {
+        img: "/assets/company/FT_Roadmap.png",
+        title: "FemTask's Roadmap",
+        description:[
+        ]
+      },
+      {
+        img: "/assets/company/FT_Lo-fil.png",
+        title: "FemTask's Lo-fi Wireframes",
+        description:[
+        ]
+      },
+      {
+        img: "/assets/company/Persona.png",
+        title: "FemTask's Persona",
+        description:[
+        ]
+      },
+      {
+        img: "/assets/company/FT-Icons.png",
+        title: "FemTask's Components",
+        description:[
+        ]
+      },
+      {
+        img: "/assets/company/FT-Colors.png",
+        title: "FemTask's Colors System",
+        description:[
+        ]
+      },
+    ],
+    figmaWireframe: [
+      {
+        img: "/assets/company/ft-bg.png",
+        title: "FamTask is a family task management app designed to help busy families coordinate chores, activities, and responsibilities in a structured and motivating way. The wireframes cover flows for parents, children, and younger kids, ensuring accessibility and usability for all ages.",
+        description:[
+        ]
+      },
+      {
+        img: "/assets/company/Onboarding_Profiles.png",
+        title: "Onboarding & Profiles.",
+        description:[
+          "Sign-up/login flow for parents and children with options for Google integration.",
+          "Profile setup allows customization with name, role, avatar, and theme color.",
+          "Separate parent and child views ensure the right features and permissions are available for each role.",
+          "This creates a personalized and inclusive experience from the start.",
+        ]
+      },
+      {
+        img: "/assets/company/Mockup-FöräldrarProfile1.png",
+        title: "Parent Dashboard:",
+        description:[
+          "Access to family overview, tasks, and goals.",
+          "Ability to create tasks or goals, assign them to family members, and set priority, frequency, and deadlines.",
+          "Notifications keep parents informed about progress and reminders.",
+          "Integration with Google Calendar for smooth scheduling.",
+          "The parent interface prioritizes control, oversight, and organization."
+        ]
+      },
+      {
+        img: "/assets/company/Adult-Mockup-Kalender.png",
+        title: "Calendar Integration",
+        description:[
+          "Family-wide calendar view with monthly and daily breakdowns.",
+          "Tasks and events are displayed in one place to reduce scheduling conflicts.",
+          "Parents can quickly add, edit, or remove items.",
+          "This feature supports seamless coordination of family activities.",
+        ]
+      },
+      {
+        img: "/assets/company/Mockup-BarnProfile.png",
+        title: "Child Dashboard:",
+        description:[
+          "Simple to-do lists with tasks assigned by parents.",
+          "Tabs for to-do, completed, and rewards to give a clear sense of progress.",
+          "Visual rewards system (points, stars, and gifts) encourages motivation and responsibility.",
+          "Notifications notify children of new or pending tasks.",
+          "The design gamifies household chores, making participation fun and engaging."
+        ]
+      },
+      {
+        img: "/assets/company/Mockup-SmallbarnProfile.png",
+        title: "Young Children's View",
+        description:[
+          "Uses visual icons and images instead of text-heavy lists.",
+          "Progress is tracked with stars and fun illustrations.",
+          "A reward celebration screen appears when goals are achieved.",
+          "This makes the app accessible and motivating even for younger kids.",
+        ]
+      },
+    ],
     date: '2024-08-15',
     link: 'https://www.figma.com/proto/jwKUkFEj6WmTKHI1h6dgb6/Chas-s-cases?node-id=128-18044&viewport=-3550%2C-6994%2C0.5&t=93aTMy9a327QduC5-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=128%3A18044',
     figmaLink: 'https://www.figma.com/proto/jwKUkFEj6WmTKHI1h6dgb6/Chas-s-cases?node-id=128-18044&viewport=-3550%2C-6994%2C0.5&t=93aTMy9a327QduC5-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=128%3A18044',
@@ -250,16 +463,11 @@ export const projects: Project[] = [
     description: 'A digital platform combining web agency services with e-commerce functionality, designed to simplify processes for clients while maintaining a personal connection.',
     fullDescription: 'The ULO project was my final exam project, where I designed and developed a platform for ULO Webbyrå. The aim was to merge traditional web agency services with e-commerce, making it easier for small and mid-sized businesses to purchase digital solutions directly online. The platform emphasizes simplicity, intuitive navigation, and a stylish, modern aesthetic that reflects ULO’s professional identity while ensuring scalability for future services and products.',
     category: 'UX/UI Design, Web Development',
-    image: '/assets/company/ulo-bg.png',
-    images: [
-      '/assets/company/ulo-home.png',
-      '/assets/company/ulo-services.png',
-      '/assets/company/ulo-ecommerce.png',
-      '/assets/company/ulo-contact.png'
-    ],
+    image: '/assets/ulo/ulo_banner.png',
+    images: ['/assets/ullis/ullis-banner.png'],
     tools: ['Figma', 'FigJam', 'Next.js', 'TypeScript', 'TailwindCSS'],
     myrole: 'UX Research, Wireframing, UI Design, Frontend Development',
-    status: 'case-study',
+    status: 'live',
     assignmentdescription: 'Design and develop a web platform for ULO Webbyrå that combines agency services with e-commerce functionality in a professional and user-friendly way.',
     assignmentimg: [
       '/assets/project-ulo-wireframes.jpg',
@@ -286,13 +494,105 @@ export const projects: Project[] = [
       'Flexible foundation ready for scaling and new features'
     ],
     figmaimg: [
-      '/assets/company/ulo-wireframes.png',
-      '/assets/company/ulo-styleguide.png',
-      '/assets/company/ulo-prototypes.png'
+      {
+        img: "/assets/ulo/Key_Considerations.png",
+        title: "ULO's Key Considerations",
+        description:[
+        ]
+      },
+      {
+        img: "/assets/ulo/Persona.png",
+        title: "ULO's Persona",
+        description:[
+        ]
+      },
+      {
+        img: "/assets/ulo/Flow_chart.png",
+        title: "ULO's Flow Chart",
+        description:[
+        ]
+      },
+      {
+        img: "/assets/ulo/componenets.png",
+        title: "ULO's Components",
+        description:[
+        ]
+      },
+    ],
+    figmaWireframe: [
+      {
+        img: "/assets/ulo/Hi-file_home.png",
+        title: "Home page introduces ULO's brand and value proposition. It includes:",
+        description:[
+          "A hero section with headline, subtext, and CTA.",
+          "A section displaying trusted brands and partners to build credibility.",
+          "An overview of ULO's core services (websites, design, analysis, marketing, strategy, and management).",
+          "A value section highlighting company principles.",
+          "Customer testimonials to build trust and social proof."
+        ]
+      },
+      {
+        img: "/assets/ulo/Hi-file_overview.png",
+        title: "Services overview functions as a catalog for ULO's various website solutions. It includes:",
+        description:[
+          "Service cards for each solution (Onepage, E-commerce, Presentation, Booking, Blog, Event/Conference).",
+          "A value statement section reinforcing ULO's principles.",
+          "Case-style results supported by data.",
+          "Process visuals to show workflow and reassure clients about project structure.",
+        ]
+      },
+      {
+        img: "/assets/ulo/Hi-file_Onepage-side.png",
+        title: "Onepage service page highlights a simpler website solution. It features:",
+        description:[
+          "An introductory hero with key benefits.",
+          "A “best fit for” section showing which clients benefit most from a onepage website.",
+          "A package breakdown with pricing levels.",
+          "A visual workflow diagram of the build process.",
+          "Data-driven case studies for credibility.",
+          "FAQ and CTA sections to encourage conversions.",
+        ]
+      },
+      {
+        img: "/assets/ulo/Hi-file_e-com-side.png",
+        title: "E-commerce page is dedicated to ULO's e-commerce website offering. It includes:",
+        description:[
+          "A hero section with clear positioning and visuals.",
+          "A breakdown of package tiers with included features.",
+          "A step-by-step work process section explaining how ULO builds an e-commerce site.",
+          "Highlighted functions showing what clients can expect from the solution.",
+          "Case-style success stories supported by ULO's data platform.",
+          "A FAQ section to remove barriers before booking."
+        ]
+      },
+      {
+        img: "/assets/ulo/Hi-file_quizzes.png",
+        title: ["ULO's step-by-step quiz was designed to qualify leads and personalize offerings. Each page combines service presentation with data-driven proof points and clear CTAs. The quiz flow adds interactivity and personalization, strengthening lead generation. It guides users through:"],
+        description:[
+          "Selecting website type and business size.",
+          "Defining current needs and challenges.",
+          "Indicating priorities and preferences (speed, professionalism, simplicity).",
+          "Choosing how to handle content and design.",
+          "Selecting meeting type, time, and date.",
+          "Uploading files (logos, text, images).",
+          "Providing contact information to finalize the process."
+        ]
+      },
+      {
+        img: "/assets/ulo/Hi-file_dashboard.png",
+        title: "The dashboard wireframes were designed to provide ULO clients with a clear overview of their projects, orders, and support needs. The focus was on usability, transparency, and efficiency, ensuring that customers could easily track progress, manage details, and get support when needed. It contains:",
+        description:[
+          "Dashboard Overview: Gives users a quick snapshot of project status, investments, and recent activity, ensuring they can see progress at a glance.",
+          "Project Tracking: Provides a timeline with milestones, deadlines, and communication updates, keeping clients informed and engaged throughout their projects.",
+          "Orders & Services: Lists active and past orders with details and suggests relevant add-on services, making it easy to manage and expand service use.",
+          "Account & Billing: Allows users to update personal details, review invoices, and manage subscriptions or upgrades in a transparent, self-service format.",
+          "FAQ & Support: Combines a searchable FAQ with multiple support channels, giving clients quick access to answers and help without leaving the dashboard.",
+        ]
+      },
     ],
     date: '2025-04-15',
     liveLink: 'https://ulo-webbyro.netlify.app/',
-    figmaLink: ''
+    figmaLink: 'https://www.figma.com/design/ujqfyBTpMzG3krsRgZQgUk/ULO?node-id=34-2572&t=b0SxbcipuHND74u4-1'
   }
 ];
 

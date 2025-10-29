@@ -39,13 +39,11 @@ const About = () => {
           </h2>
           <div className="max-w-4xl mx-auto">
             <p className="text-lg md:text-xl text-text-secondary leading-relaxed mb-8">
-              Now, I am dedicated to becoming a UX/UI designer, specializing in crafting modern, 
-              user-centered web applications using React.
+              I'm a UX/UI designer and web developer specializing in crafting modern, user-centered web applications using React.
             </p>
             <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
-              My work focuses on combining intuitive design with seamless functionality, helping 
-              businesses enhance their digital presence and engage users effectively. I graduated
-              as a UX/UI designer & Frontend developer in June 2025 and bring my skills to new projects.
+              My work combines intuitive design with seamless functionality to help businesses strengthen their digital presence and engage users effectively. 
+              I graduated as a UX/UI designer & Frontend developer in June 2025 and now bring my skills to new projects and collaborations.            
             </p>
           </div>
         </div>

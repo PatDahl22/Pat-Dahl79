@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const formRef = useRef();
@@ -21,40 +21,34 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    emailjs
-      .send(
-        'service_wbmovm2',
-        'template_w4acalb',
-        {
-          from_name: form.name,
-          to_name: "Pattaravarat Dahl",
-          from_email: form.email,
-          to_email: "pattaravarat.dahl@gmail.com",
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          name: form.name,
+          email: form.email,
           message: form.message,
         },
-        'FO9OEVXccvSi0lJ8v'
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+      });
 
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
-          alert("Ahh, something went wrong. Please try again.");
-        }
-      );
+      if (error) throw error;
+
+      setLoading(false);
+      alert("Thank you. I will get back to you as soon as possible.");
+
+      setForm({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      setLoading(false);
+      console.error(error);
+      alert("Ahh, something went wrong. Please try again.");
+    }
   };
   
 

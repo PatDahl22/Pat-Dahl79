@@ -93,12 +93,13 @@ exports.handler = async (event) => {
       to: email,
       from,
       subject: "Thank you! I will get back to you soon.",
-      text: `Hi ${name}!\n\nThank you for your message. I will get back to you as soon as I can.\n\n/Pat`,
+      text: `Hi ${name}!\n\nThank you for your message. I will get back to you as soon as I can.\n\nBest regards,\nPat Dahl`,
       html: `
         <div style="font-family: Arial, sans-serif; line-height: 1.5;">
           <p>Hi ${escapeHtml(name)}!</p>
           <p>Thank you for your message. I will get back to you as soon as I can.</p>
-          <p>/Pat</p>
+          <br/><p>Best regards,</p>
+          <p>Pat Dahl</p>
         </div>
       `,
     });

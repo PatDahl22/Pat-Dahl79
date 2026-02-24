@@ -1,5 +1,8 @@
 import { useRef, useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
+
+const FORM_ENDPOINT =
+  import.meta.env.VITE_FORMSUBMIT_ENDPOINT ||
+  "https://formsubmit.co/ajax/pattaravarat.dahl@gmail.com";
 
 const Contact = () => {
   const formRef = useRef();
@@ -26,15 +29,23 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      const { data, error } = await supabase.functions.invoke('send-contact-email', {
-        body: {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
           name: form.name,
           email: form.email,
           message: form.message,
-        },
+          _subject: `New message from ${form.name}`,
+        }),
       });
 
-      if (error) throw error;
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
 
       setLoading(false);
       alert("Thank you. I will get back to you as soon as possible.");

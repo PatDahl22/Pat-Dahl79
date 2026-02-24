@@ -1,13 +1,7 @@
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center px-6 lg:px-8 pt-20 bg-hero-pattern bg-cover bg-center relative">
       <div className="absolute inset-0 bg-background/90"></div>
@@ -35,13 +29,13 @@ const Hero = () => {
         </p>
 
         {/* CTA Button */}
-        <button 
-          onClick={() => scrollToSection('contact')}
+        <Link 
+          to="/contact"
           className="cta-button inline-flex items-center gap-3 px-8 py-4 rounded-radius-lg text-lg font-semibold group animate-fade-in"
         >
           Let's work together
           <ArrowRight className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" />
-        </button>
+        </Link>
 
       </div>
     </section>

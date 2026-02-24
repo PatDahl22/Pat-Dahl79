@@ -1,14 +1,8 @@
 import ProjectCard from './ProjectCard';
 import { projects } from '@/data';
+import { Link } from 'react-router-dom';
 
 const Projects = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section id="projects" className="py-20 lg:py-32 px-6 lg:px-8 bg-section-pattern bg-cover bg-center relative">
       <div className="absolute inset-0 bg-background/95"></div>
@@ -44,12 +38,12 @@ const Projects = () => {
           <p className="text-lg text-text-secondary mb-6">
             Interested in collaborating on something amazing?
           </p>
-          <button 
-            onClick={() => scrollToSection('contact')}
+          <Link 
+            to="/contact"
             className="cta-button px-8 py-4 text-lg font-medium rounded-radius shadow-lg hover:shadow-xl transition-all"
           >
             Get in touch
-          </button>
+          </Link>
         </div>
       </div>
     </section>

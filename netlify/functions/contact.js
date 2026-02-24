@@ -17,7 +17,7 @@ const getAllowedOrigin = (origin) => {
     .map((s) => s.trim())
     .filter(Boolean);
 
-  // Om du bara kör från samma domän kan du lämna ALLOWED_ORIGINS tom och då blir origin null.
+  // If you only run from the same domain, you can leave ALLOWED_ORIGINS empty and origin will be null.
   if (!origin || list.length === 0) return origin || null;
 
   return list.includes(origin) ? origin : null;
@@ -54,7 +54,7 @@ exports.handler = async (event) => {
   try {
     const { name, email, message, website } = JSON.parse(event.body || "{}");
 
-    // Honeypot (bots fyller ofta i dolda fält)
+    // Honeypot (bots often fill in hidden fields)
     if (website) {
       return json(200, { ok: true }, allowedOrigin);
     }
@@ -68,36 +68,36 @@ exports.handler = async (event) => {
     const from = process.env.SENDGRID_FROM; // verified sender
     const to = process.env.SENDGRID_TO;
 
-    // 1) Mail till dig
+    // 1) Mail to you
     await sgMail.send({
       to,
       from,
-      subject: `Nytt meddelande från ${name}`,
+      subject: `New message from ${name}`,
       replyTo: email,
       text:
-        `Namn: ${name}\n` +
+        `Name: ${name}\n` +
         `Email: ${email}\n\n` +
-        `Meddelande:\n${message}\n`,
+        `Message:\n${message}\n`,
       html: `
         <div style="font-family: Arial, sans-serif; line-height: 1.5;">
-          <h2>Nytt meddelande</h2>
-          <p><b>Namn:</b> ${escapeHtml(name)}</p>
+          <h2>New message</h2>
+          <p><b>Name:</b> ${escapeHtml(name)}</p>
           <p><b>Email:</b> ${escapeHtml(email)}</p>
-          <p><b>Meddelande:</b><br/>${escapeHtml(message).replace(/\n/g, "<br/>")}</p>
+          <p><b>Message:</b><br/>${escapeHtml(message).replace(/\n/g, "<br/>")}</p>
         </div>
       `,
     });
 
-    // 2) Auto-reply till besökaren (valfritt men snyggt)
+    // 2) Auto-reply to visitor (optional but nice)
     await sgMail.send({
       to: email,
       from,
-      subject: "Tack! Jag återkommer snart.",
-      text: `Hej ${name}!\n\nTack för ditt meddelande. Jag återkommer så snart jag kan.\n\n/Pat`,
+      subject: "Thank you! I will get back to you soon.",
+      text: `Hi ${name}!\n\nThank you for your message. I will get back to you as soon as I can.\n\n/Pat`,
       html: `
         <div style="font-family: Arial, sans-serif; line-height: 1.5;">
-          <p>Hej ${escapeHtml(name)}!</p>
-          <p>Tack för ditt meddelande. Jag återkommer så snart jag kan.</p>
+          <p>Hi ${escapeHtml(name)}!</p>
+          <p>Thank you for your message. I will get back to you as soon as I can.</p>
           <p>/Pat</p>
         </div>
       `,

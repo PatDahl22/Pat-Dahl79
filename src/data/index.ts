@@ -234,7 +234,7 @@ export const projects: Project[] = [
     fullDescription: 'Advanced Interaction Design: A deep dive into UX design focusing on user analysis, requirements management, and the design process. The goal is to translate complex user needs into intuitive digital solutions.',
     category: 'UX Design',
     image: '/assets/company/FT-banner.png',
-    images: ['/assets/company/FT-banner.png', '/assets/company/Mockup-SmallbarnProfile.png', '/assets/company/Mockup-FöräldrarProfile.png', '/assets/company/Mockup-BarnProfile.png'],
+    images: ['/assets/company/FT-banner.png', '/assets/company/Mockup-SmallbarnProfile.png', '/assets/company/Mockup-ParentProfile.png', '/assets/company/Mockup-ChildProfile.png'],
     tools: ['Figma', 'Figjam', 'Slack'],
     myrole: 'User research, Wireframing, Prototyping, Testing',
     status: 'case-study',
@@ -311,7 +311,7 @@ export const projects: Project[] = [
         ]
       },
       {
-        img: "/assets/company/Mockup-FöräldrarProfile1.png",
+        img: "/assets/company/Mockup-ParentProfile1.png",
         title: "Parent Dashboard:",
         description:[
           "Access to family overview, tasks, and goals.",

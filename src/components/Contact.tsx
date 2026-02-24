@@ -41,10 +41,10 @@ const Contact = () => {
         }),
       });
 
-      // 👇 LÄGG TILL DEN HÄR RADEN
+      // 👇 ADD THIS LINE
       const result = await response.json().catch(() => ({}));
 
-      // 👇 Förbättrad error-hantering
+      // 👇 Improved error handling
       if (!response.ok) {
         throw new Error(result?.error || "Failed to send message");
       }

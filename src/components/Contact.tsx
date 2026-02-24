@@ -1,11 +1,9 @@
 import { useRef, useState } from "react";
 
-const FORM_ENDPOINT =
-  import.meta.env.VITE_FORMSUBMIT_ENDPOINT ||
-  "https://formsubmit.co/ajax/pattaravarat.dahl@gmail.com";
+const FORM_ENDPOINT = "/.netlify/functions/contact";
 
 const Contact = () => {
-  const formRef = useRef();
+  const formRef = useRef<HTMLFormElement>(null);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -14,7 +12,7 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { target } = e;
     const { name, value } = target;
 
@@ -24,7 +22,7 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
 
@@ -39,26 +37,31 @@ const Contact = () => {
           name: form.name,
           email: form.email,
           message: form.message,
-          _subject: `New message from ${form.name}`,
+          website: "", // honeypot
         }),
       });
 
+      // 👇 LÄGG TILL DEN HÄR RADEN
+      const result = await response.json().catch(() => ({}));
+
+      // 👇 Förbättrad error-hantering
       if (!response.ok) {
-        throw new Error("Failed to send message");
+        throw new Error(result?.error || "Failed to send message");
       }
 
-      setLoading(false);
-      alert("Thank you. I will get back to you as soon as possible.");
-
+      // ✅ SUCCESS
+      alert("Thank you! I will get back to you as soon as possible.");
       setForm({
         name: "",
         email: "",
         message: "",
       });
+
     } catch (error) {
-      setLoading(false);
       console.error(error);
       alert("Ahh, something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
   

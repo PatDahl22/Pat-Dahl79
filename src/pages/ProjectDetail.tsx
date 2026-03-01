@@ -235,6 +235,86 @@ const ProjectDetail = () => {
           </div>
         </section>
 
+        {/* My Approach */}
+        {project.myApproach && (
+          <section className="py-16 px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
+              <h3 className="text-3xl font-bold text-text-primary mb-8 text-center">My Approach</h3>
+              <div className="space-y-8">
+                {project.myApproach.map((approach, index) => (
+                  <div key={index} className="bg-surface rounded-xl p-8 shadow-sm border border-border relative overflow-hidden transition-all hover:shadow-md">
+                    <div className="absolute top-0 left-0 w-1.5 h-full bg-primary/80"></div>
+                    <h4 className="text-2xl font-bold text-text-primary mb-4 flex items-center gap-3">
+                      <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-sm font-bold border border-primary/20 shrink-0">
+                        {index + 1}
+                      </span>
+                      {approach.title.replace(/^\d+\.\s*/, '')}
+                    </h4>
+                    <div className="space-y-6 pl-11">
+                      {approach.content.map((block, blockIndex) => (
+                        <div key={blockIndex}>
+                          {block.text && (
+                            <p className="text-text-secondary leading-relaxed whitespace-pre-wrap">
+                              {block.text}
+                            </p>
+                          )}
+                          {block.list && (
+                            <ul className="mt-4 grid sm:grid-cols-2 gap-3">
+                              {block.list.map((item, itemIndex) => (
+                                <li key={itemIndex} className="flex items-start bg-background p-3 rounded-lg border border-border/60 hover:border-primary/30 transition-colors">
+                                  <span className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 mr-3 flex-shrink-0" />
+                                  <span className="text-text-secondary text-sm leading-snug">{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* AI Designer Showcase */}
+        {project.aiDesignerShowcase && (
+          <section className="py-16 px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
+              <h3 className="text-3xl font-bold text-text-primary mb-8 text-center">AI Designer Showcase</h3>
+              <div className="space-y-8">
+                {Object.entries(project.aiDesignerShowcase).map(([key, value]) => {
+                  const titleMap: Record<string, string> = {
+                    workflowAndStructure: 'Workflow & Structure',
+                    promptLogic: 'Prompt Logic & Improvement Over Time',
+                    collaboration: 'Collaboration',
+                    productionAndDelivery: 'Production & Delivery',
+                    systemsThinking: 'Systems Thinking',
+                  };
+                  return (
+                    <div key={key} className="bg-surface rounded-xl p-6 shadow-sm border border-border">
+                      <h4 className="text-xl font-bold text-text-primary mb-3">
+                        {titleMap[key] || key}
+                      </h4>
+                      <ul className="space-y-2">
+                        {Array.isArray(value) ? value.map((desc, index) => (
+                          <li key={index} className="text-text-secondary flex items-start">
+                            <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            {desc}
+                          </li>
+                        )) : (
+                          <p className="text-text-secondary">{value}</p>
+                        )}
+                      </ul>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Project Images */}
         {project.images.length > 1 && (
           <section className="py-16 px-6 lg:px-8">

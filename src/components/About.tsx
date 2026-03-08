@@ -1,4 +1,4 @@
-import { Code, Palette, Zap, Users } from 'lucide-react';
+import { Code, Palette, Zap, Users, Award } from 'lucide-react';
 import Approachs from './Approachs';
 
 const About = () => {
@@ -29,6 +29,16 @@ const About = () => {
     }
   ];
 
+  const certifications = [
+    {
+      title: "Certificate of Vocational Education in AI and Prompt Design for UX/UI designers",
+      items: [
+        "Prototype, Test and Implementation with the support of AI",
+        "Research & Idea Generation with the support of AI in UX/UI projects"
+      ]
+    }
+  ];
+
   return (
     <section id="about" className="py-20 lg:py-32 px-6 lg:px-8 bg-surface-muted">
       <div className="max-w-7xl mx-auto">
@@ -39,11 +49,10 @@ const About = () => {
           </h2>
           <div className="max-w-4xl mx-auto">
             <p className="text-lg md:text-xl text-text-secondary leading-relaxed mb-8">
-              I'm a UX/UI designer and web developer specializing in crafting modern, user-centered web applications using React.
+              I bring 4 years of experience as a UX/UI and web developer, specializing in crafting modern, user-centered applications. Additionally, I am currently expanding my capabilities as a student in IoT and embedded development.
             </p>
             <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
-              My work combines intuitive design with seamless functionality to help businesses strengthen their digital presence and engage users effectively. 
-              I graduated as a UX/UI designer & Frontend developer in June 2025 and now bring my skills to new projects and collaborations.            
+              My work seamlessly merges intuitive design with cutting-edge functionality, blending elegant web applications with hardware solutions. Having graduated as a UX/UI designer & Frontend developer in June 2025, I now bring my multidisciplinary skill set to innovative projects and collaborations.            
             </p>
           </div>
         </div>
@@ -71,6 +80,39 @@ const About = () => {
               </ul>
             </div>
           ))}
+        </div>
+
+        {/* Certifications and Training */}
+        <div className="mb-16 lg:mb-20">
+          <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-8 text-center">
+            Certifications & Training
+          </h3>
+          <div className="flex justify-center flex-wrap gap-8">
+            {certifications.map((cert, index) => (
+              <div 
+                key={index}
+                className="bg-surface p-6 lg:p-8 rounded-radius-lg border border-border-light hover:shadow-lg transition-all duration-300 animate-fade-in w-full max-w-4xl"
+              >
+                <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                  <div className="w-12 h-12 shrink-0 bg-primary-light rounded-radius flex items-center justify-center">
+                    <Award className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-text-primary mb-3">
+                      {cert.title}
+                    </h4>
+                    <ul className="space-y-2 list-disc list-inside">
+                      {cert.items.map((item, i) => (
+                        <li key={i} className="text-text-secondary text-sm md:text-base">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Personal Touch */}

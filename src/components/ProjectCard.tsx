@@ -9,13 +9,13 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'live':
-        return 'bg-success text-white-100';
+        return 'bg-success text-black-100 font-medium';
       case 'case-study':
-        return 'bg-accent text-white-100';
+        return 'bg-secondary text-black-100 font-medium';
       case 'coming-soon':
-        return 'bg-warning text-black-100';
+        return 'bg-warning text-black-100 font-medium';
       default:
-        return 'bg-secondary text-text-primary';
+        return 'bg-secondary text-black-100 font-medium';
     }
   };
 

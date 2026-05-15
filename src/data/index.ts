@@ -760,7 +760,7 @@ export const projects: Project[] = [
     ],
     status: 'case-study' as const,
     githubLink: 'https://github.com/PatDahl22/IoT-Fall_Larm',
-    date: '2025–2026',
+    date: '2026-05-15',
     myrole: 'IoT-utvecklare — ansvarig för hela stacken: firmware (C/FreeRTOS), säkerhetsarkitektur, fog-backend (Python) och GDPR-implementering.',
     assignmentdescription: 'Skolprojekt inom IoT-utbildning (YH) med fokus på verklighetsnära säkerhetskrav. Uppgiften var att bygga ett komplett IoT-system för falldetektering med hänsyn till GDPR och säkerhet i varje lager.',
     assignmentimg: [],
@@ -809,6 +809,7 @@ export const projects: Project[] = [
         description: ['Hårdvarukomponenter: ESP32-C6, accelerometer, buzzer, LED och knapp.']
       }
     ],
+    figmaWireframe: [],
   }
 ];
 

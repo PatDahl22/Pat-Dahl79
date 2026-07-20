@@ -17,7 +17,7 @@ const Projects = () => {
             Projects.
           </h3>
           <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            These projects represent my 4 years UX/UI- web developer and student as a IoT and embedded developers, where I have applied my skills to real-world challenges. Each project includes a brief description, along with links to code repositories and live demos.
+            These projects reflect my work as a UX/UI designer and frontend developer, alongside my ongoing studies in IoT and embedded development, where I've applied my skills to real-world challenges. Each project includes a brief description, along with links to code repositories and live demos.
           </p>
           <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed mt-4">
             Through these, I have demonstrated my ability to tackle complex problems, learn and work with various technologies, and effectively manage projects from start to finish.

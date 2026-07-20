@@ -112,7 +112,7 @@ const ProjectDetail = () => {
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12">
               <div>
-                <h3 className="text-2xl font-bold text-text-primary mb-4">Assignments</h3>
+                <h3 className="text-2xl font-bold text-text-primary mb-4">Assignment</h3>
                 <p className="text-text-secondary">{project.assignmentdescription}</p>
               </div>
               <div>
@@ -142,7 +142,7 @@ const ProjectDetail = () => {
         </section>
 
         {/* Project's Research */}
-        {project.figmaimg.length > 1 && (
+        {project.figmaimg.length > 0 && (
           <section className="py-16 px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
               <h3 className="text-2xl font-bold text-text-primary mb-8 text-center">Project's Research</h3>
@@ -168,7 +168,7 @@ const ProjectDetail = () => {
         )}
 
         {/* Figma Wireframes */}
-        {project.figmaWireframe.length > 1 && (
+        {project.figmaWireframe.length > 0 && (
           <section className="py-16 px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
               <h3 className="text-2xl font-bold text-text-primary mb-8 text-center">Figma Wireframes</h3>

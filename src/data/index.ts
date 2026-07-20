@@ -121,7 +121,7 @@ export const projects: Project[] = [
         img: "/assets/tb/Authentication_Security.png",
         title: "The authentication flow ensures user accounts are secure and personalized. It includes:",
         description:[
-          "Includes login, sign-up, and password reset screens.",
+          "Login, sign-up, and password reset screens.",
           "Confirmation states provide feedback (e.g., “Password reset successful”).",
           "Multiple login options (email, social logins) make the process accessible and quick.",
           "Robust security measures (e.g., CAPTCHA, two-factor authentication) protect user accounts."
@@ -140,7 +140,7 @@ export const projects: Project[] = [
         img: "/assets/tb/Core_Features.png",
         title: "The core features page showcases the app's main functionalities. It includes:",
         description:[
-          "Travel assistant dashboard greets users personally and offers quick access to actions: Find your dream vacation, Places to stay nearby, Find food nearby and Experiences & activities.",
+          "Travel assistant dashboard greets users personally and offers quick access to actions: Find your dream vacation, Places to stay nearby, Find food nearby, and Experiences & activities.",
           "An About page highlights app benefits and provides direct support via chat and contact info.",
         ]
       },
@@ -158,7 +158,7 @@ export const projects: Project[] = [
     link: 'https://travelbuddy-demo.com',
     figmaLink: 'https://www.figma.com/design/jwKUkFEj6WmTKHI1h6dgb6/Chas-s-cases?node-id=0-1&t=IeyPi2C3NlU7n26c-1',
     challenge: 'Creating an intuitive travel planning experience that helps users organize complex itineraries while maintaining simplicity.',
-    solution: 'Developed a user-centered design approach with extensive user research, prototyping, and iterative testing to create an seamless travel planning interface.',
+    solution: 'Developed a user-centered design approach with extensive user research, prototyping, and iterative testing to create a seamless travel planning interface.',
     results: ['Improved user engagement by 40%', 'Reduced planning time by 60%', 'Achieved 95% user satisfaction score']
   },
   /* project 2 */
@@ -182,7 +182,7 @@ export const projects: Project[] = [
       "The use of modern technologies ensured high performance and scalability."
     ],
     keyFeatures: [
-      "Product list and filtering: Grid-displayed format with images, prices and short descriptions. Products-filter based on category, price range or size.",
+      "Product list and filtering: products displayed in a grid with images, prices, and short descriptions, with filters for category, price range, and size.",
       "Responsive design: Ensured a seamless shopping experience across devices with a mobile-first approach.",
       "Smooth shopping cart flow: Simplified the checkout process with a clear and intuitive interface, reducing cart abandonment rates."
     ],
@@ -217,18 +217,18 @@ export const projects: Project[] = [
         img: "/assets/ws/Ws-Wireframe.png",
         title: "Shoes & Stitches's wireframes were designed to structure a modern e-commerce experience for a fashion and footwear brand. The focus was on usability, product discoverability, and a smooth purchase flow. All wireframes include desktop and mobile versions to ensure responsiveness. It includes:",
         description:[
-          "Home page with strong hero section with promotional messaging and CTA. Featured products to immediately showcase popular items. Visual brand storytelling through lifestyle imagery. A best sellers section to drive conversions with proven products. The home page balances inspiration and commerce, encouraging users to explore and shop.",
-          "Grid layout displaying multiple products in products listing page with clear images and prices. Filtering and sorting options to help users find items quickly and consistent product card design for easy scanning. This page is optimized for browsing and comparing products.",
-          "Large hero product image with multiple views in product detail page. Key details for example name, price, size selector, and “Add to Cart” button. Tabs for description, shipping info, and additional details and “You may also like” recommendations to encourage cross-selling. The design makes purchasing simple while keeping upsell opportunities visible.",
-          "Brand storytelling with mission, values, and history in About page. Content structured with images and text blocks for readability and focus on responsible fashion and credibility. This page builds trust and connects with users on a brand level.",
+          "Home page with a strong hero section featuring promotional messaging and a CTA. Featured products immediately showcase popular items. Visual brand storytelling through lifestyle imagery. A best sellers section drives conversions with proven products. The home page balances inspiration and commerce, encouraging users to explore and shop.",
+          "Grid layout displaying multiple products on the product listing page, with clear images and prices. Filtering and sorting options help users find items quickly, with a consistent product card design for easy scanning. This page is optimized for browsing and comparing products.",
+          "Large hero product image with multiple views on the product detail page. Key details such as name, price, size selector, and an “Add to Cart” button. Tabs for description, shipping info, and additional details, plus “You may also like” recommendations to encourage cross-selling. The design makes purchasing simple while keeping upsell opportunities visible.",
+          "Brand storytelling with mission, values, and history on the About page. Content structured with images and text blocks for readability, with a focus on responsible fashion and credibility. This page builds trust and connects with users on a brand level.",
         ]
       },
       {
         img: "/assets/ws/Ws-Wireframe2.png",
         title: "",
         description:[
-          "Simple form for inquiries with fields for name, email, phone, and message in Contact page. Contact details and support info presented clearly and ensures users can reach out easily, reducing friction.",
-          "Streamlined checkout flow with customer details, shipping, and payment in Checkout and Confirmation page. Order summary always visible for transparency and final confirmation screen thanking the user and confirming their purchase. This ensures a smooth and trustworthy checkout experience, which is critical for conversions.",
+          "Simple inquiry form with fields for name, email, phone, and message on the Contact page. Contact details and support info are presented clearly, ensuring users can reach out easily and reducing friction.",
+          "Streamlined checkout flow with customer details, shipping, and payment on the Checkout and Confirmation pages. Order summary always visible for transparency, with a final confirmation screen thanking the user and confirming their purchase. This ensures a smooth and trustworthy checkout experience, which is critical for conversions.",
           "Shoes & Stitches's wireframes were designed to provide a clean, intuitive, and conversion-focused shopping experience. From homepage inspiration to product discovery and checkout, the flow prioritizes clarity, trust, and ease of use. The responsive layouts make the site accessible across devices, ensuring a consistent shopping journey.",
         ]
       },
@@ -245,8 +245,8 @@ export const projects: Project[] = [
   /* project 3 */
   {
     id: 3,
-    slug: 'femtask',
-    title: 'FemTask',
+    slug: 'famtask',
+    title: 'FamTask',
     description: 'Advanced Interaction Design: A deep dive into UX design focusing on user analysis, requirements management, and the design process. The goal is to translate complex user needs into intuitive digital solutions.',
     fullDescription: 'Advanced Interaction Design: A deep dive into UX design focusing on user analysis, requirements management, and the design process. The goal is to translate complex user needs into intuitive digital solutions.',
     category: 'UX Design',
@@ -275,37 +275,37 @@ export const projects: Project[] = [
     figmaimg: [
       {
         img: "/assets/company/FT_MoSCoW.png",
-        title: "FemTask's MoSCoW",
+        title: "FamTask's MoSCoW",
         description:[
         ]
       },
       {
         img: "/assets/company/FT_Roadmap.png",
-        title: "FemTask's Roadmap",
+        title: "FamTask's Roadmap",
         description:[
         ]
       },
       {
         img: "/assets/company/FT_Lo-fil.png",
-        title: "FemTask's Lo-fi Wireframes",
+        title: "FamTask's Lo-fi Wireframes",
         description:[
         ]
       },
       {
         img: "/assets/company/Persona.png",
-        title: "FemTask's Persona",
+        title: "FamTask's Persona",
         description:[
         ]
       },
       {
         img: "/assets/company/FT-Icons.png",
-        title: "FemTask's Components",
+        title: "FamTask's Components",
         description:[
         ]
       },
       {
         img: "/assets/company/FT-Colors.png",
-        title: "FemTask's Colors System",
+        title: "FamTask's Colors System",
         description:[
         ]
       },
@@ -433,7 +433,7 @@ export const projects: Project[] = [
         img: "/assets/ullis/Hi-file_treatments.png",
         title: "The treatments page provides a clear and structured overview of all services. It includes:",
         description:[
-          "ASeparate categories (training, massage, wellness).",
+          "Separate categories (training, massage, wellness).",
           "Service cards with descriptions, durations, and prices.",
           "Package deals for customers seeking bundled options.",
           "Clear booking CTAs to encourage conversion.",
@@ -454,7 +454,7 @@ export const projects: Project[] = [
         title: "The contact page makes it easy for users to get in touch. It contains:",
         description:[
           "Contact details (address, phone, email, opening hours).",
-          "A contact form with drop-down for service type.",
+          "A contact form with a drop-down for service type.",
           "A dedicated corporate client section highlighting B2B offers.",
           "A FAQ section addressing common questions.",
           "An integrated map with directions for easy navigation.",
@@ -734,9 +734,9 @@ export const projects: Project[] = [
     id: 7,
     slug: 'fall-larm',
     title: 'Fall-Larm',
-    description: 'IoT-system för automatisk falldetektering hos äldre — end-to-end krypterat, GDPR-komplett och nätverkssäkrat med mTLS.',
-    fullDescription: 'Fall-Larm är ett end-to-end IoT-system som detekterar fall hos äldre hemmaboende via accelerometer på en ESP32-C6. Larmdata krypteras direkt på enheten med XChaCha20-Poly1305 (libsodium) och skickas via MQTT/TLS till en lokal Raspberry Pi Zero 2W (fog-nod) som lagrar data i en SQLCipher-krypterad databas — utan att känslig hälsodata lämnar hemnätverket.',
-    category: 'IoT & Säkerhet',
+    description: 'IoT system for automatic fall detection for the elderly — end-to-end encrypted, fully GDPR-compliant, and network-secured with mTLS.',
+    fullDescription: 'Fall-Larm is an end-to-end IoT system that detects falls in elderly people living at home, using an accelerometer on an ESP32-C6. Alarm data is encrypted on-device with XChaCha20-Poly1305 (libsodium) and sent via MQTT/TLS to a local Raspberry Pi Zero 2W (fog node), which stores the data in an SQLCipher-encrypted database — without any sensitive health data ever leaving the home network.',
+    category: 'IoT & Security',
     image: '/assets/fl/Topology.png',
     images: [
       '/assets/fl/Topology.png',
@@ -758,55 +758,55 @@ export const projects: Project[] = [
       'fail2ban',
       'pynacl'
     ],
-    status: 'case-study' as const,
+    status: 'case-study',
     githubLink: 'https://github.com/PatDahl22/IoT-Fall_Larm',
     date: '2026-05-15',
-    myrole: 'IoT-utvecklare — ansvarig för hela stacken: firmware (C/FreeRTOS), säkerhetsarkitektur, fog-backend (Python) och GDPR-implementering.',
-    assignmentdescription: 'Skolprojekt inom IoT-utbildning (YH) med fokus på verklighetsnära säkerhetskrav. Uppgiften var att bygga ett komplett IoT-system för falldetektering med hänsyn till GDPR och säkerhet i varje lager.',
+    myrole: 'IoT Developer — responsible for the entire stack: firmware (C/FreeRTOS), security architecture, fog backend (Python), and GDPR implementation.',
+    assignmentdescription: 'A school project as part of a vocational (YH) IoT program, focused on real-world security requirements. The assignment was to build a complete fall-detection IoT system with GDPR compliance and security built into every layer.',
     assignmentimg: [],
-    challenge: 'Fall är den vanligaste orsaken till allvarliga skador hos äldre. Befintliga larm kräver att användaren aktivt trycker — något som inte fungerar vid ett plötsligt fall. Utmaningen var att bygga ett system som detekterar fall automatiskt, kommunicerar säkert, och hanterar känsliga hälsouppgifter enligt GDPR — utan att data lämnar hemmet.',
-    solution: 'Ett trelagers-system: ESP32-C6 (edge) med 3-fas falldetektering och end-to-end kryptering via libsodium. Raspberry Pi Zero 2W (fog) som lokal hub med SQLCipher-databas, automatisk GDPR-retention och daglig backup. Nätverksskikt med TLS på port 8883, mTLS per enhet och fail2ban mot brute force.',
+    challenge: 'Falls are the most common cause of serious injury among the elderly. Existing alarms require the user to actively press a button — which doesn\'t help during a sudden fall. The challenge was to build a system that detects falls automatically, communicates securely, and handles sensitive health data in compliance with GDPR — without any data leaving the home.',
+    solution: 'A three-layer system: an ESP32-C6 (edge) running 3-phase fall detection with end-to-end encryption via libsodium; a Raspberry Pi Zero 2W (fog) acting as a local hub with an SQLCipher database, automatic GDPR retention, and daily backups; and a network layer with TLS on port 8883, per-device mTLS, and fail2ban against brute-force attacks.',
     results: [
-      'End-to-end kryptering verifierad: 145 B klartext → 185 B cipher, negativtest med fel nyckel bekräftat',
-      'NVS-buffer klarar upp till 16 larm offline — flushas automatiskt vid återanslutning',
-      'SQLCipher AES-256 aktiverat med GDPR-kompatibel retention och 30-dagars backup',
-      'mTLS med per-enhet-certifikat signerade av intern CA — varje enhet autentiseras individuellt',
-      'fail2ban blockerar IP efter 5 misslyckade anslutningar på 120 sekunder'
+      'End-to-end encryption verified: 145 B plaintext → 185 B ciphertext, negative test with the wrong key confirmed',
+      'NVS buffer handles up to 16 offline alarms — automatically flushed on reconnection',
+      'SQLCipher AES-256 enabled with GDPR-compliant retention and 30-day backups',
+      'mTLS with per-device certificates signed by an internal CA — every device authenticated individually',
+      'fail2ban blocks an IP after 5 failed connection attempts within 120 seconds'
     ],
     conclusion: [
-      'Fall-Larm visar att IoT-säkerhet inte behöver väljas bort i skolprojekt — det är möjligt att implementera verklighetsnära skydd med rätt arkitekturval.',
-      'Valet av fog-arkitektur (lokal Raspberry Pi) istället för molnet var avgörande för GDPR-efterlevnad och minimerar attackytan.',
-      'Mjukt beroende på SQLCipher (graceful fallback till sqlite3 med varning) visar att robusthet och transparens kan kombineras.',
-      'Nästa steg: Topic-ACL:er för fine-grained behörighet per enhet, certifikatrevokering (CRL/OCSP) och integration med fysisk ESP32-C6.'
+      'Fall-Larm shows that IoT security doesn\'t have to be an afterthought in school projects — real-world-grade protection is achievable with the right architectural choices.',
+      'Choosing a fog architecture (local Raspberry Pi) instead of the cloud was key to GDPR compliance and minimizes the attack surface.',
+      'A soft dependency on SQLCipher (graceful fallback to sqlite3 with a warning) shows that robustness and transparency can go hand in hand.',
+      'Next steps: topic-level ACLs for fine-grained per-device permissions, certificate revocation (CRL/OCSP), and integration with a physical ESP32-C6.'
     ],
     keyFeatures: [
-      '3-fas accelerometer-falldetektering (FreeRTOS tasks)',
-      'XChaCha20-Poly1305 kryptering på edge (libsodium)',
-      'NVS-flash offline-buffer — 16 slots, överlever omstart',
-      'SQLCipher AES-256 databas + GDPR retention + daglig backup',
-      'MQTT över TLS port 8883 + mTLS per-enhet-certifikat',
-      'fail2ban brute-force-skydd'
+      '3-phase accelerometer-based fall detection (FreeRTOS tasks)',
+      'XChaCha20-Poly1305 encryption on the edge (libsodium)',
+      'NVS flash offline buffer — 16 slots, survives reboot',
+      'SQLCipher AES-256 database + GDPR retention + daily backup',
+      'MQTT over TLS on port 8883 + per-device mTLS certificates',
+      'fail2ban brute-force protection'
     ],
     figmaimg: [
       {
         img: '/assets/fl/Topology.png',
-        title: 'Systemtopologi',
-        description: ['Visar hela systemet: ESP32 (edge) → MQTT/TLS → Raspberry Pi (fog) → SQLCipher-databas → Cloud (framtida).']
+        title: 'System Topology',
+        description: ['Shows the full system: ESP32 (edge) → MQTT/TLS → Raspberry Pi (fog) → SQLCipher database → Cloud (future).']
       },
       {
         img: '/assets/fl/Fall-Larm-C4.png',
-        title: 'C4-komponentdiagram',
-        description: ['Detaljerad vy av ESP32-firmware (FreeRTOS-tasks) och fog hub (Python-moduler).']
+        title: 'C4 Component Diagram',
+        description: ['Detailed view of the ESP32 firmware (FreeRTOS tasks) and the fog hub (Python modules).']
       },
       {
         img: '/assets/fl/DBKryptering.png',
-        title: 'Databaskryptering',
-        description: ['SQLCipher + Libsodium på Raspberry Pi Zero 2W: krypterad SQLite-databas, access control och audit log.']
+        title: 'Database Encryption',
+        description: ['SQLCipher + libsodium on the Raspberry Pi Zero 2W: encrypted SQLite database, access control, and audit log.']
       },
       {
         img: '/assets/fl/Komponentdiagram.png',
-        title: 'Kopplingsdiagram',
-        description: ['Hårdvarukomponenter: ESP32-C6, accelerometer, buzzer, LED och knapp.']
+        title: 'Wiring Diagram',
+        description: ['Hardware components: ESP32-C6, accelerometer, buzzer, LED, and button.']
       }
     ],
     figmaWireframe: [],
@@ -828,44 +828,16 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     id: 1,
-    quote: "Working with Pat was an exceptional experience. Their attention to detail and creative problem-solving skills transformed our vision into a stunning, user-friendly platform that exceeded all expectations.",
-    name: "Nadia Johnson",
-    title: "CEO at R&B AB",
+    quote: "Pat's work on our corporate website was flawless. They managed to balance aesthetic appeal with functionality, creating a site that truly represents our brand values.",
+    name: "Ulrica Persson",
+    title: "Brand Manager at Ullis Fitness & Kroppsvård",
     image: "/assets/company/chatbot1.png"
   },
   {
     id: 2,
-    quote: "Pat's expertise in UX/UI design is remarkable. They delivered a mobile app that not only looks beautiful but provides an intuitive user experience that our customers love. Highly recommended!",
-    name: "Sara Connor",
-    title: "Designer specialist at Chas Academy",
-    image: "/assets/company/chatbot1.png"
-  },
-  {
-    id: 3,
-    quote: "The e-commerce platform Pat designed for us resulted in a 40% increase in conversions. Their understanding of user behavior and business goals is outstanding.",
-    name: "Emma Rodriguez",
-    title: "Marketing Director at NRS Shop",
-    image: "/assets/company/chatbot1.png"
-  },
-  {
-    id: 4,
-    quote: "Pat's work on our corporate website was flawless. They managed to balance aesthetic appeal with functionality, creating a site that truly represents our brand values.",
-    name: "Ulrica Persson",
-    title: "Brand Manager at Ullis fitness",
-    image: "/assets/company/chatbot1.png"
-  },
-  {
-    id: 5,
     quote: "As a startup, we needed someone who could understand our vision and translate it into a compelling digital experience. Pat delivered beyond our expectations with creativity and professionalism.",
     name: "Lisa Park",
-    title: "Founder at ULO web agency",
-    image: "/assets/company/chatbot1.png"
-  },
-  {
-    id: 6,
-    quote: "Pat's design thinking approach helped us solve complex user experience challenges. The result was a dashboard that our users find both powerful and easy to use.",
-    name: "Creata K",
-    title: "Specialist at DataInsights",
+    title: "Founder at ULO Webbyrå",
     image: "/assets/company/chatbot1.png"
   }
 ];
@@ -903,7 +875,6 @@ export const socialMedia = [
   {
     id: 2,
     img: "/link.svg",
-    link: "https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile",
+    link: "https://www.linkedin.com/in/pat-dahl-7984b019a/",
   },
 ];
-

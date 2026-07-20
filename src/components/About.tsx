@@ -6,26 +6,26 @@ const About = () => {
     {
       icon: Code,
       title: "Development",
-      description: "React, TypeScript, Node.js, and modern web technologies",
-      items: ["React & Next.js", "TypeScript & JavaScript", "Node.js & Next.js", "HTML, CSS & Tailwind CSS"]
+      description: "React, TypeScript, and modern frontend technologies",
+      items: ["React & Next.js", "TypeScript & JavaScript", "Git & GitHub", "HTML, CSS & Tailwind CSS"]
     },
     {
       icon: Palette,
       title: "Design",
       description: "UI/UX design with focus on user experience and accessibility",
-      items: ["UI/UX Design", "Figma & Figjam", "Adobe Creative Suite", "Prototyping"]
+      items: ["UI/UX Design", "Figma & FigJam", "Adobe XD", "Prototyping & User Testing"]
     },
     {
       icon: Zap,
       title: "Performance",
       description: "Optimized, fast-loading websites with excellent Core Web Vitals",
-      items: ["Performance Optimization", "SEO", "Accessibility", "Analytics"]
+      items: ["Performance Optimization", "SEO Fundamentals", "Accessibility (WCAG)", "Google Analytics"]
     },
     {
       icon: Users,
       title: "Collaboration",
-      description: "Working closely with teams to deliver exceptional results",
-      items: ["Agile Methodology", "Version Control", "Code Reviews", "Mentoring"]
+      description: "Bringing a business background into agile, cross-functional teams",
+      items: ["Agile, Scrum & Kanban", "Requirements Gathering", "Stakeholder Communication", "Version Control"]
     }
   ];
 
@@ -49,37 +49,44 @@ const About = () => {
           </h2>
           <div className="max-w-4xl mx-auto">
             <p className="text-lg md:text-xl text-text-secondary leading-relaxed mb-8">
-              I bring 4 years of experience as a UX/UI and web developer, specializing in crafting modern, user-centered applications. Additionally, I am currently expanding my capabilities as a student in IoT and embedded development.
+              I'm a UX/UI designer and frontend developer, graduated in June 2025, with a background in economics, business, and client-facing service. That combination shapes how I work: I design with the end user in mind, but I also understand the business goals a product needs to hit.
             </p>
             <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
-              My work seamlessly merges intuitive design with cutting-edge functionality, blending elegant web applications with hardware solutions. Having graduated as a UX/UI designer & Frontend developer in June 2025, I now bring my multidisciplinary skill set to innovative projects and collaborations.            
+              My process covers the full UX journey — research, user flows, wireframes and prototypes in Figma — through to production-ready interfaces built with React, Next.js and Tailwind CSS. I'm currently expanding into IoT and embedded development, curious about how thoughtful design extends beyond the screen into physical products.
             </p>
           </div>
         </div>
 
         {/* Skills Categories */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 lg:mb-20">
-          {skills.map((category, index) => (
-            <div 
-              key={category.title}
-              className="bg-surface p-6 lg:p-8 rounded-radius-lg border border-border-light hover:shadow-lg transition-all duration-300 group animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="w-12 h-12 bg-primary-light rounded-radius flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
-                <category.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+          {skills.map((category, index) => {
+            const delayClasses = [
+              'delay-100',
+              'delay-200',
+              'delay-300',
+              'delay-400'
+            ];
+            return (
+              <div
+                key={category.title}
+                className={`bg-surface p-6 lg:p-8 rounded-radius-lg border border-border-light hover:shadow-lg transition-all duration-300 group animate-fade-in ${delayClasses[index]}`}
+              >
+                <div className="w-12 h-12 bg-primary-light rounded-radius flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
+                  <category.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                </div>
+                <h3 className="text-xl font-bold text-text-primary mb-4">
+                  {category.title}
+                </h3>
+                <ul className="space-y-2">
+                  {category.items.map((skill) => (
+                    <li key={skill} className="text-text-secondary text-sm">
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <h3 className="text-xl font-bold text-text-primary mb-4">
-                {category.title}
-              </h3>
-              <ul className="space-y-2">
-                {category.items.map((skill) => (
-                  <li key={skill} className="text-text-secondary text-sm">
-                    {skill}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Certifications and Training */}
@@ -89,7 +96,7 @@ const About = () => {
           </h3>
           <div className="flex justify-center flex-wrap gap-8">
             {certifications.map((cert, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-surface p-6 lg:p-8 rounded-radius-lg border border-border-light hover:shadow-lg transition-all duration-300 animate-fade-in w-full max-w-4xl"
               >

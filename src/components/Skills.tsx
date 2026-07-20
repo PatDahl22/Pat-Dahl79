@@ -1,40 +1,32 @@
-import { Code2, Palette, Zap, Users, Figma, Globe } from 'lucide-react';
+import { Code2, Palette, Zap, Users } from 'lucide-react';
 
 const Skills = () => {
   const skillCategories = [
     {
       icon: Palette,
       title: "Design",
-      skills: ["UI/UX Design", "Figma", "Adobe XD", "Prototyping", "Design Systems", "User Research"]
+      skills: ["UI/UX Design", "Figma & FigJam", "Adobe XD", "Prototyping", "Design Systems", "User Research"]
     },
     {
       icon: Code2,
       title: "Frontend",
-      skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "HTML5", "CSS3"]
+      skills: ["React", "TypeScript", "Next.js (fundamentals)", "Tailwind CSS", "HTML5", "CSS3"]
     },
     {
       icon: Zap,
       title: "Tools",
-      skills: ["Git", "VS Code", "Supabase", "Vercel", "npm/yarn", "Chrome DevTools"]
+      skills: ["Git & GitHub", "VS Code", "Supabase & Firebase", "Vercel", "npm/yarn", "Chrome DevTools"]
     },
     {
       icon: Users,
-      title: "Soft Skills",
-      skills: ["Problem Solving", "Collaboration", "Communication", "Project Management", "Agile", "Mentoring"]
+      title: "Business & Process",
+      skills: ["Problem Solving", "Stakeholder Communication", "Requirements Gathering", "Project Ownership", "Agile, Scrum & Kanban", "Client Service"]
     }
   ];
 
-  const technologies = [
-    { name: "React", level: 90 },
-    { name: "TypeScript", level: 85 },
-    { name: "JavaScript", level: 90 },
-    { name: "Git", level: 90 },
-    { name: "Tailwind CSS", level: 90 },
-    { name: "UI/UX Design", level: 95 },
-    { name: "Figma", level: 95 },
-    { name: "AdobeXD", level: 80 },
-    { name: "Next.js", level: 80 },
-    { name: "Supabase", level: 85 }
+  const coreStack = [
+    "React", "TypeScript", "JavaScript", "Next.js", "Tailwind CSS",
+    "Figma", "UI/UX Design", "Git", "Supabase"
   ];
 
   return (
@@ -53,7 +45,7 @@ const Skills = () => {
         {/* Skills Categories */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 lg:mb-20">
           {skillCategories.map((category, index) => (
-            <div 
+            <div
               key={category.title}
               className="bg-surface p-6 lg:p-8 rounded-radius-lg border border-border-light hover:shadow-lg transition-all duration-300 group animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
@@ -75,29 +67,19 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* Technology Proficiency */}
+        {/* Core Stack */}
         <div className="bg-surface p-8 lg:p-12 rounded-radius-lg border border-border-light">
           <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-8 text-center">
-            Technology Proficiency
+            Core Stack
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {technologies.map((tech, index) => (
-              <div 
-                key={tech.name} 
-                className="animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
+          <div className="flex flex-wrap justify-center gap-3">
+            {coreStack.map((tech) => (
+              <span
+                key={tech}
+                className="bg-primary-light text-text-primary px-4 py-2 rounded-full text-sm font-medium border border-border-light"
               >
-                <div className="flex justify-between items-center mb-2">
-                  <span className="font-medium text-text-primary">{tech.name}</span>
-                  <span className="text-sm text-text-secondary">{tech.level}%</span>
-                </div>
-                <div className="w-full bg-border rounded-full h-2">
-                  <div 
-                    className="bg-gradient-to-r from-primary to-primary-hover h-2 rounded-full transition-all duration-1000 ease-smooth"
-                    style={{ width: `${tech.level}%` }}
-                  ></div>
-                </div>
-              </div>
+                {tech}
+              </span>
             ))}
           </div>
         </div>

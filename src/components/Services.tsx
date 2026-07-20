@@ -10,15 +10,15 @@ const Services = () => {
     },
     {
       icon: Code,
-      title: "Frontend Development", 
+      title: "Frontend Development",
       description: "Building responsive and performant web applications using modern technologies and best practices.",
       features: ["React Development", "TypeScript", "Responsive Design", "Performance Optimization"]
     },
     {
       icon: Monitor,
       title: "Web Applications",
-      description: "Full-stack web application development from concept to deployment with modern frameworks.",
-      features: ["Single Page Apps", "Progressive Web Apps", "API Integration", "Database Design"]
+      description: "End-to-end web application development — from interface to Firebase/Supabase-backed functionality — using modern frameworks like React and Next.js.",
+      features: ["Single Page Apps", "Progressive Web Apps", "API Integration", "Firebase & Supabase"]
     },
     {
       icon: Smartphone,
@@ -28,15 +28,15 @@ const Services = () => {
     },
     {
       icon: Search,
-      title: "SEO Optimization",
-      description: "Implementing SEO best practices to improve search engine visibility and organic traffic.",
-      features: ["Technical SEO", "Performance Optimization", "Structured Data", "Analytics Setup"]
+      title: "SEO Fundamentals",
+      description: "Applying SEO fundamentals and performance best practices to improve discoverability and organic reach.",
+      features: ["Technical SEO Basics", "Performance Optimization", "Structured Data", "Analytics Setup"]
     },
     {
       icon: Users,
       title: "Consultation",
-      description: "Strategic consultation on digital products, user experience improvements, and technical architecture.",
-      features: ["UX Audits", "Technical Reviews", "Strategy Planning", "Team Mentoring"]
+      description: "Strategic input on digital products, UX improvements, and technical decisions — drawing on a business background as well as design and development expertise.",
+      features: ["UX Audits", "Technical Reviews", "Strategy Planning", "Roadmap Support"]
     }
   ];
 
@@ -56,7 +56,7 @@ const Services = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {services.map((service, index) => (
-            <div 
+            <div
               key={service.title}
               className="bg-surface border border-border-light rounded-radius-lg p-6 lg:p-8 hover:shadow-lg transition-all duration-300 group animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}

@@ -810,6 +810,158 @@ export const projects: Project[] = [
       }
     ],
     figmaWireframe: [],
+  },
+  /* project 8 */
+  {
+    id: 8,
+    slug: 'nail-rich-press-on',
+    title: 'Nail-Rich Studio — Press-on',
+    description: 'An AI-native design-to-code workflow: a complete e-commerce experience for handmade press-on nails, taken from research to a clickable prototype in Claude Design and then built into a working site with Claude Code — all in a single day.',
+    fullDescription: 'This case study documents how I used an AI-native workflow to design and build a responsive e-commerce experience for Nail-Rich Studio, a Stockholm nail studio with 15+ years of craft. The entire UX process — strategy, research, information architecture, low-fi wireframes, art direction, a design system and a clickable high-fidelity prototype — was created in Claude Design. I then handed the design off to Claude Code, which translated it into a semantic, mobile-first coded site. The project is as much an exploration of the "AI Designer" role — where I direct the strategy, quality and decisions while AI accelerates the production — as it is a shop for press-on nails.',
+    category: 'AI Design, UX/UI Design & Development',
+    image: '/assets/hero.png',
+    images: [
+      '/assets/home.png',
+      '/assets/shop.png',
+      '/assets/product.png',
+      '/assets/sizing.png',
+      '/assets/custom.png',
+      '/assets/confirmation.png'
+    ],
+    tools: ['Claude Design', 'Claude Code', 'HTML5', 'CSS3', 'JavaScript', 'WCAG 2.2 AA'],
+    status: 'case-study',
+    githubLink: 'https://github.com/PatDahl22/press-on',
+    figmaLink: 'https://claude.ai/design/p/4eb8e282-8484-4d79-8592-5bb3bccaea1c?file=Nail-Rich+Studio+-+Prototype.dc.html&via=share',
+    date: '2026-07-22',
+    myrole: 'AI Designer, UX/UI Designer & Frontend — owning the full chain from strategy and research to prototype and coded build.',
+    assignmentdescription: 'Design and build a trustworthy, mobile-first shop for handmade press-on nails that makes choosing and buying the right size simple, while staying visually connected to the existing Nail-Rich Studio brand. Use the project to test an end-to-end AI workflow: Claude Design for the whole UX process, Claude Code for implementation.',
+    assignmentimg: [],
+    challenge: 'Press-on nails live or die by fit — the wrong size means returns, support and disappointed customers. The brief was to make sizing feel safe and effortless, clearly separate three commerce models (ready-to-ship, made-to-order and custom), and communicate handmade quality — all in polished Swedish, mobile-first and accessible. On top of the product challenge, I wanted to prove that a single designer could carry a project from research all the way to running code using an AI design-to-code pipeline, without losing rigor or design intent along the way.',
+    solution: 'I ran the full UX process in Claude Design as explicit phases: an assumptions-and-research register, competitor analysis, personas and Jobs-To-Be-Done, a scalable sitemap, low-fi wireframes, a chosen art direction ("Editorial Nail Atelier") with a token-based design system, and a clickable high-fidelity prototype using the studio\'s real logo and product photos. The central decision was a sizing-first flow with three safe paths (sizing kit, measure-at-home, saved profile) that never blocks the user. I then exported the design to Claude Code, which built a semantic, mobile-first site sharing the same design tokens, copy and components — with loading, empty, error and success states and accessibility built in from the start.',
+    results: [
+      'Carried a full e-commerce project from research to a coded, working site in a single day using a Claude Design → Claude Code pipeline.',
+      'Designed a sizing-first flow with three non-blocking paths (kit, measure-at-home, saved profile) to reduce wrong-size orders.',
+      'Delivered a scalable information architecture that cleanly separates ready-to-ship, made-to-order and custom products.',
+      'Kept design and code in sync by sharing the same design tokens, Swedish copy and component structure across both tools.'
+    ],
+    conclusion: [
+      'An AI-native workflow lets a single designer own the whole chain — strategy, design and code — without the usual handoff losses between tools.',
+      'The designer\'s real value shifts to direction: writing a rigorous brief, supplying real brand assets, and judging quality — not pushing pixels.',
+      'Labelling every assumption ("needs Pat\'s confirmation") keeps an AI-accelerated project honest and ready for real business decisions.',
+      'Because design tokens and components travelled from prototype into code, the built site stayed faithful to the approved design.'
+    ],
+    keyFeatures: [
+      'Sizing-first experience with three safe methods: sizing kit, measure-at-home, and saved nail profile',
+      'Three clearly separated commerce models: ready-to-ship, made-to-order and custom design',
+      'Product configurator with shape and length selectors and live pricing',
+      'Mobile-first, WCAG 2.2 AA, with visible focus and 44px touch targets',
+      'Polished Swedish copy with an English-toggle-ready structure',
+      'Shared design tokens carried from Claude Design prototype into the Claude Code build'
+    ],
+    figmaimg: [
+      {
+        img: '/assets/research-assumptions.png',
+        title: 'Strategy — Assumptions & research register',
+        description: ['Every fact is labelled as confirmed or "needs confirmation", so nothing invented follows the project into production.']
+      },
+      {
+        img: '/assets/research-personas.png',
+        title: 'Users, Jobs-To-Be-Done & hypotheses',
+        description: ['Three behaviour segments and testable hypotheses — including that a sizing-first flow reduces abandonment and wrong-size orders.']
+      },
+      {
+        img: '/assets/research-artdirection.png',
+        title: 'Art direction — "Editorial Nail Atelier"',
+        description: ['A token-based visual system built on the studio\'s real logo: deep berry, brass and warm ivory, with a phased MVP scope plan.']
+      }
+    ],
+    figmaWireframe: [
+      {
+        img: '/assets/wireframes.png',
+        title: 'Low-fi wireframes (Scenario A) — structure before style, created in Claude Design.',
+        description: [
+          'The full first-time-buyer journey mapped as low-fi screens: Home → Shop → Product → Sizing → Cart → Checkout → Confirmation.',
+          'Sizing gets its own step with three paths, and a rule that no path ever blocks the user from returning to the product.',
+          'Annotations capture purpose, primary and secondary actions and decision points for every screen before any visual styling.'
+        ]
+      }
+    ],
+    aiDesignerShowcase: {
+      workflowAndStructure: [
+        'Phased design in Claude Design: I worked in explicit stages — strategy, research, IA, wireframes, art direction, design system, hi-fi and a clickable prototype — instead of jumping straight to screens.',
+        'Design-to-code handoff: the approved prototype, tokens, copy and component structure were exported to Claude Code, which built the mobile-first site — keeping one continuous chain from idea to running code.'
+      ],
+      promptLogic: [
+        'A rigorous brief as the backbone: I wrote a detailed, structured prompt (role, project goal, business context, working rules, phased deliverables) that acted as the single source of truth for the AI team.',
+        'Iterative refinement: I steered the work in tight loops — feeding in the studio\'s real product photos, tightening the sizing flow, and reviewing each milestone rather than accepting the first output.'
+      ],
+      collaboration: [
+        'AI as a multidisciplinary team, human as director: Claude Design played researcher, IA, UI and design-systems lead, while I owned brand assets, decisions and quality control.',
+        'Human-in-the-loop review: every phase was checked against real business constraints, with open questions (shipping, payment, returns, exact size chart) explicitly parked for the client to confirm.'
+      ],
+      productionAndDelivery: [
+        'Structured handoff package: design tokens, component inventory, Swedish copy deck and a product data model gave Claude Code an unambiguous spec to build from.',
+        'Production-minded build: the coded site is semantic and mobile-first, with loading, empty, error and success states and accessibility implemented from the start — not bolted on.'
+      ],
+      systemsThinking: [
+        'Shared tokens across tools: colour, typography and spacing tokens travelled from the Claude Design prototype into CSS in the Claude Code build, keeping design and code visually identical.',
+        'Scalable, error-preventing architecture: the IA scales to all three product types, and the sizing-first flow is engineered to prevent the single most costly mistake — the wrong size.'
+      ]
+    },
+    myApproach: [
+      {
+        title: '1. Choosing an AI-native workflow',
+        content: [
+          { text: 'I deliberately paired two tools to keep one unbroken chain from thinking to product: Claude Design for the entire UX process, and Claude Code for the build. The goal was to prove a single designer can own strategy, design and code without the losses that usually happen at each handoff.' }
+        ]
+      },
+      {
+        title: '2. Writing the brief that runs the project',
+        content: [
+          { text: 'Instead of prompting screen by screen, I wrote one rigorous brief that defined the whole engagement:' },
+          { list: [
+            'Role: a senior multidisciplinary product-design team (research, IA, UI, design systems, accessibility).',
+            'Rules: work in explicit stages, keep a decision log, and label every assumption.',
+            'Guardrails: natural Swedish copy, no unverified claims, mobile-first and accessible by default.'
+          ] }
+        ]
+      },
+      {
+        title: '3. Research and strategy before pixels',
+        content: [
+          { text: 'The first outputs were not screens but an assumptions register, competitor analysis, personas, Jobs-To-Be-Done and testable hypotheses — so the design rested on evidence, with unknowns flagged for the client rather than guessed.' }
+        ]
+      },
+      {
+        title: '4. From wireframes to a clickable prototype',
+        content: [
+          { text: 'I moved through the phases in order:' },
+          { list: [
+            'Low-fi wireframes for the whole first-time-buyer journey (Scenario A).',
+            'An art direction — "Editorial Nail Atelier" — and a token-based design system from the real brand.',
+            'High-fidelity screens and a clickable prototype using the studio\'s real logo and product photos.'
+          ] }
+        ]
+      },
+      {
+        title: '5. Real assets and iterative refinement',
+        content: [
+          { text: 'I fed in the studio\'s actual logo and product photography and refined in loops — adding a measuring guide, tightening the sizing step, and reviewing each milestone — so the prototype felt like the real brand, not a generic template.' }
+        ]
+      },
+      {
+        title: '6. Handoff to Claude Code and the build',
+        content: [
+          { text: 'With the prototype approved, I exported the design — tokens, components, copy and data model — to Claude Code, which built a semantic, mobile-first site that shares the same design language. Design and code stayed in sync because they spoke the same token vocabulary.' }
+        ]
+      },
+      {
+        title: '7. What I own vs. what AI accelerates',
+        content: [
+          { text: 'AI scaled the production; I owned the direction. The rigorous brief, the choice of a sizing-first flow, the real brand assets, the review of every phase, and the honest "needs confirmation" flags were mine — and that is exactly where a designer adds value in an AI-native workflow.' }
+        ]
+      }
+    ]
   }
 ];
 

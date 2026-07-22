@@ -141,7 +141,7 @@ const Contact = () => {
                 </a>
 
                 <a
-                  href="https://drive.google.com/file/d/1-s852I1L5L7vZIuBqK0qnzbhcMBDKkrl/view?usp=drive_link"                  target="_blank"
+                  href="https://claude.ai/code/artifact/3a52bd38-18ad-410b-aae8-8e9ce3e16614"                  target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-card border border-border-light rounded-radius flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all group"
                   title="Download CV"
